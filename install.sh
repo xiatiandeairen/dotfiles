@@ -6,6 +6,14 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 BLUE='\033[0;34m'
 NC='\033[0m' 
+
+get_script_dir() {
+    # Get the directory path of the current script
+    local script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    echo "$script_path"
+}
+CACHE_DIR=$(get_script_dir)/.backup 
+
 print_message() {
     local type=$1
     local message=$2
@@ -54,7 +62,50 @@ install_if_missing() {
     fi
 }
 
-# Function to install all needed cmd tools
+# Backup files
+backup() {
+    local source_path="$1"
+    local target_dir="${2:-$CACHE_DIR}"
+    local timestamp=$(date +%Y%m%d_%H%M%S)
+    
+    # Check if source exists
+    if [ ! -e "$source_path" ]; then
+        print_message "error" "Source path '$source_path' does not exist"
+    fi
+
+    # Create target directory if it doesn't exist
+    if [ ! -d "$target_dir" ]; then
+        mkdir -p "$target_dir"
+    fi
+
+    # Get the basename of the source
+    local source_name=$(basename "$source_path")
+    local backup_name="${source_name}_${timestamp}"
+    local backup_path="${target_dir}/${backup_name}"
+
+    print_message "warning" "about to backup ${source_path} file to ${backup_path}"
+    # Create backup using tar with different options based on source type
+    if [ -d "$source_path" ]; then
+        # Backup directory
+        cp -r "$source_path" "$backup_path"
+        if [ $? -eq 0 ]; then
+            print_message "success" "Directory backup created: $backup_path"
+        else
+            print_message "error" "Failed to backup directory: $source_path"
+        fi
+    elif [ -f "$source_path" ]; then
+        # Backup file
+        cp "$source_path" "$backup_path"
+        if [ $? -eq 0 ]; then
+            print_message "success" "File backup created: $backup_path"
+        else
+            print_message "error" "Failed to backup file: $source_path"
+        fi
+    fi
+}
+
+
+# install all needed cmd tools
 software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd")
 print_message "success" "==> Step One: install all needed command line tools"
 for software in "${software_list[@]}"; do
@@ -62,3 +113,19 @@ for software in "${software_list[@]}"; do
 done
 print_message "success" "==> Step One: install success"
 
+
+# backup config
+print_message "success" "==> Step Two: backup existing config"
+paths=("${HOME}/.zshenv" "${HOME}/.config")
+for path in "${paths[@]}"; do
+    backup "$path"
+done
+print_message "success" "==> Step Two: backup success"
+
+
+# stow config
+print_message "success" "==> Step Three: stow new config"
+export DOTFILES=$(get_script_dir)
+source $(get_script_dir)/bootstrap.sh
+bootstrap
+print_message "success" "==> Step Three: stow success"

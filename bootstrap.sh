@@ -23,11 +23,11 @@ function dot() {
 
     case "$command" in
         "pull")
-            $(which git) -C "${DOTFILES}" pull origin ${target} --autostash
+            $(which git) -C "${DOTFILES}" pull origin ${target:-develop} --autostash
         ;;
         
         "push")
-            $(which git) -C "${DOTFILES}" push origin ${target}
+            $(which git) -C "${DOTFILES}" push origin ${target:-develop}
         ;;
 
         "commit")

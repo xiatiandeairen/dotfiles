@@ -27,5 +27,8 @@ alias br=broot
 # fzf
 source <(fzf --zsh)
 
-#eza
+# eza
 export EZA_CONFIG_DIR="${XDG_CONFIG_HOME}/eza"
+
+# tig
+export TIGRC_USER="${XDG_CONFIG_HOME}/tig/config/tigrc"

@@ -1,7 +1,20 @@
 # XDG Base Home, more info see: 
-export XDG_CONFIG_HOME=${HOME}/.config
-export XDG_CACHE_HOME=${HOME}/.cache
-export XDG_DATA_HOME=${HOME}/.local/share
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+
+# editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# Man pages
+export MANPAGER='nvim +Man!'
+
+# Dotfiles Home
+export DOTFILES="${HOME}/dotfiles"
 
 # ZSH Home
-export ZDOTDIR=${XDG_CONFIG_HOME}/zsh
+export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export HISTFILE="${ZDOTDIR}/.zhistory"    # History filepath
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000                   # Maximum events in history file

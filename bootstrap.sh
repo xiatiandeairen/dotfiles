@@ -31,7 +31,7 @@ function dot() {
         ;;
 
         "commit")
-            $(which git) -C "${DOTFILES}" commit -a
+            $(which git) -C "${DOTFILES}" add . && $(which git) -C "${DOTFILES}" commit
         ;;
 
         "diff")

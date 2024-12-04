@@ -3,3 +3,6 @@ export STOW_DIR=${DOTFILES}
 
 #brew
 eval "$($(which brew) shellenv)"
+
+# the fuck
+eval "$(thefuck --alias)"

@@ -20,3 +20,6 @@ export BAT_CONFIG_DIR="${XDG_CONFIG_HOME}/bat"
 export BAT_CONFIG_PATH="${BAT_CONFIG_DIR}/bat.conf"
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+
+# broot
+alias br=broot

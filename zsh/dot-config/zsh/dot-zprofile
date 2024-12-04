@@ -1,2 +1,5 @@
 # stow
 export STOW_DIR=${DOTFILES}
+
+#brew
+eval "$($(which brew) shellenv)"

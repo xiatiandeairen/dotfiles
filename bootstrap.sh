@@ -6,7 +6,7 @@ function apply() {
 }
 
 function bootstrap() {
-    targets=(zsh)
+    targets=(zsh brew)
     for target in "${targets[@]}"; do
         apply ${target}
     done
@@ -31,7 +31,7 @@ function dot() {
         ;;
 
         "commit")
-            $(which git) -C "${DOTFILES}" commit -a
+            $(which git) -C "${DOTFILES}" add . && $(which git) -C "${DOTFILES}" commit
         ;;
 
         "diff")

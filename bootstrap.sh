@@ -6,7 +6,7 @@ function apply() {
 }
 
 function bootstrap() {
-    targets=(zsh brew bat broot)
+    targets=(zsh brew bat broot eza)
     for target in "${targets[@]}"; do
         apply ${target}
     done

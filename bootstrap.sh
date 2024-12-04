@@ -14,7 +14,7 @@ function bootstrap() {
 
 function dot() {
     if [ $# -eq 0 ]; then
-        echo "Usage: dot [pull|push|status|apply [path]]|bootstrap"
+        echo "Usage: dot [pull|push|commit|diff|cd|status|apply [path]]|bootstrap"
         return 1
     fi
 
@@ -23,11 +23,23 @@ function dot() {
 
     case "$command" in
         "pull")
-            $(which git) -C "{$DOTFILES}" pull origin main --autostash
+            $(which git) -C "${DOTFILES}" pull origin main --autostash
         ;;
         
         "push")
             $(which git) -C "${DOTFILES}" push origin main
+        ;;
+
+        "commit")
+            $(which git) -C "${DOTFILES}" commit -a
+        ;;
+
+        "diff")
+            $(which git) -C "${DOTFILES}" diff
+        ;;
+
+        "cd")
+            cd "${DOTFILES}"
         ;;
         
         "status")

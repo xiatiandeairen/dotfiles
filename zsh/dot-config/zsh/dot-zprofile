@@ -32,3 +32,7 @@ export EZA_CONFIG_DIR="${XDG_CONFIG_HOME}/eza"
 
 # tig
 export TIGRC_USER="${XDG_CONFIG_HOME}/tig/config/tigrc"
+
+# tmux
+export TMUX_CONFIG_PATH="${XDG_CONFIG_HOME}/tmux/tmux.conf"
+alias tmux="tmux -f ${TMUX_CONFIG_PATH}"

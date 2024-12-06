@@ -27,6 +27,7 @@ export DOTFILES="${HOME}/dotfiles"
 
 # ZSH Home
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export ZDOTDIR_PLUGINS="${ZDOTDIR}/plugins"
 export HISTFILE="${ZDOTDIR}/.zhistory"    # History filepath
 export HISTSIZE=10000   # Maximum events for internal history
 export SAVEHIST=10000   # Maximum events in history file

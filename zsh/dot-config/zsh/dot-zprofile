@@ -1,18 +1,21 @@
 # bootstrap
 [ -f ${DOTFILES}/bootstrap.sh ] && source ${DOTFILES}/bootstrap.sh 
 
+# lazyload, eg. lazyload nvm -- 'source ~/.nvm/nvm.sh'
+[ -f ${ZDOTDIR_PLUGINS}/zsh-lazyload/zsh-lazyload.zsh ] && source ${ZDOTDIR_PLUGINS}/zsh-lazyload/zsh-lazyload.zsh
+
 # stow
 export STOW_DIR=${DOTFILES}
 
 #brew
 export BREW_CONFIG_PATH="${ZDOTDIR}/config/brew.sh"
 [ ! -f ${BREW_CONFIG_PATH} ] && eval_once "$($(which brew) shellenv)" "${BREW_CONFIG_PATH}"
-source ${BREW_CONFIG_PATH}
+lazyload brew -- 'source ${BREW_CONFIG_PATH}'
 
 # the fuck
 export FUCK_CONFIG_PATH="${ZDOTDIR}/config/thefuck.sh"
 [ ! -f ${FUCK_CONFIG_PATH} ] && eval_once "$(thefuck --alias)" "${FUCK_CONFIG_PATH}"
-source ${FUCK_CONFIG_PATH}
+lazyload fuck -- 'source ${FUCK_CONFIG_PATH}'
 
 # zoxide
 export _ZO_DATA_DIR="${XDG_DATA_HOME}/zoxide"
@@ -36,7 +39,7 @@ alias br=broot
 # fzf
 export FZF_CONFIG_PATH="${ZDOTDIR}/config/fzf.sh"
 [ ! -f ${FZF_CONFIG_PATH} ] && eval_once "$(fzf --zsh)" "${FZF_CONFIG_PATH}"
-source ${FZF_CONFIG_PATH}
+lazyload fzf -- 'source ${FZF_CONFIG_PATH}'
 
 # eza
 export EZA_CONFIG_DIR="${XDG_CONFIG_HOME}/eza"

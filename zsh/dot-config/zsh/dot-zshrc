@@ -1,15 +1,14 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+[[ -f ${ZDOTDIR}/plugins/powerlevel10k/powerlevel10k.zsh-theme ]] && source ${ZDOTDIR}/plugins/powerlevel10k/powerlevel10k.zsh-theme
+
 # complete
 autoload -U compinit && compinit
-_comp_options+=(globdots) # With hidden files
-
-# zsh prompt
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-PROMPT='%F{green}%*%f %F{blue}%4~%f %F{3}${vcs_info_msg_0_}%f %B%#%b '
-RPROMPT='%(?.%F{10}%B√%b.%F{1}%?)%f'
-zstyle ':vcs_info:git:*' formats '%b'
 
 # fpath
 export fpath=($DOTFILES/zsh/plugins ${fpath})
@@ -28,3 +27,6 @@ setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event i
 setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
 setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ${ZDOTDIR}/p10k.zsh ]] || source ${ZDOTDIR}/p10k.zsh

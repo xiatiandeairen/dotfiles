@@ -1,3 +1,9 @@
 [submodule "zsh/dot-config/zsh/plugins/powerlevel10k"]
 	path = zsh/dot-config/zsh/plugins/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh/dot-config/zsh/plugins/zsh-lazyload"]
+	path = zsh/dot-config/zsh/plugins/zsh-lazyload
+	url = https://github.com/qoomon/zsh-lazyload.git
+[submodule "zsh/dot-config/zsh/plugins/zsh-bench"]
+	path = zsh/dot-config/zsh/plugins/zsh-bench
+	url = https://github.com/romkatv/zsh-bench.git

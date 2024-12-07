@@ -8,6 +8,7 @@
 export STOW_DIR=${DOTFILES}
 
 #brew
+lazyload brew -- '
 export BREW_CONFIG_PATH="${ZDOTDIR}/config/brew.sh"
 if [[ $(uname -m) == "arm64" ]]; then
     brew_command="$(/opt/homebrew/bin/brew shellenv)"
@@ -15,7 +16,8 @@ else
     brew_command="$(/usr/local/Homebrew/bin/brew shellenv)"
 fi
 [ ! -f ${BREW_CONFIG_PATH} ] && eval_once "${brew_command}" "${BREW_CONFIG_PATH}"
-lazyload brew -- 'source ${BREW_CONFIG_PATH}'
+source ${BREW_CONFIG_PATH}
+'
 
 # the fuck
 export FUCK_CONFIG_PATH="${ZDOTDIR}/config/thefuck.sh"

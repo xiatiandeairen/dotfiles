@@ -1,15 +1,3 @@
-PROFILE_STARTUP="${PROFILE_STARTUP:=false}"
-# Run this to get a profile trace and exit: time zsh -i -c echo
-# Or: PROFILE_STARTUP=true time /bin/zsh -i --login -c echo
-if [[ "$PROFILE_STARTUP" == true ]]; then
-    # http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
-    PS4=$'%D{%M%S%.} %N:%i> '
-    # zmodload zsh/datetime
-    # PS4='+$EPOCHREALTIME %N:%i> '
-    exec 3>&2 2>$HOME/startlog.$$
-    setopt xtrace prompt_subst
-fi
-
 # XDG Base Home, more info see: 
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
@@ -27,15 +15,18 @@ export DOTFILES="${HOME}/dotfiles"
 
 # ZSH Home
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export ZDOTDIR_CONFIG="{ZDOTDIR}/config"
 export ZDOTDIR_PLUGINS="${ZDOTDIR}/plugins"
-export HISTFILE="${ZDOTDIR}/.zhistory"    # History filepath
+export ZDOTDIR_FUNCTIONS="${ZDOTDIR}/functions"
+export ZDOTDIR_MODULES="${ZDOTDIR}/modules"
+export ZDOTDIR_SNIPPETS="{ZDOTDIR}/snippets"
+export ZDOTDIR_SCRIPTS="{ZDOTDIR}/scripts"
+export HISTFILE="${ZDOTDIR}/.zhistory"
 export HISTSIZE=10000   # Maximum events for internal history
 export SAVEHIST=10000   # Maximum events in history file
 
-# PATH
-[ -f ${ZDOTDIR}/PATH.sh ] && source ${ZDOTDIR}/PATH.sh 
+# fpath
+export fpath=($DOTFILES/zsh/functions ${fpath})
 
-if [[ "$PROFILE_STARTUP" == true ]]; then
-    unsetopt xtrace
-    exec 2>&3 3>&-
-fi
+# PATH
+[ -f ${ZDOTDIR}/path.zsh ] && source ${ZDOTDIR}/path.zsh

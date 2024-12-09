@@ -4,6 +4,7 @@ fpath=(${ZDOTDIR}/autoload ${fpath})
 # bootstrap
 [ -f ${DOTFILES}/bootstrap.sh ] && source ${DOTFILES}/bootstrap.sh 
 
+# autoload
 autoload -Uz lazyload
 autoload -Uz cacheAsFile
 
@@ -38,11 +39,8 @@ source ${ZOXIDE_CONFIG_PATH}
 # bat
 export BAT_CONFIG_DIR="${XDG_CONFIG_HOME}/bat"
 export BAT_CONFIG_PATH="${BAT_CONFIG_DIR}/bat.conf"
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
-alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # broot
-alias br=broot
 
 # fzf
 export FZF_CONFIG_PATH="${ZDOTDIR_CACHE}/fzf.sh"
@@ -57,4 +55,6 @@ export TIGRC_USER="${XDG_CONFIG_HOME}/tig/config/tigrc"
 
 # tmux
 export TMUX_CONFIG_PATH="${XDG_CONFIG_HOME}/tmux/tmux.conf"
-alias tmux="tmux -f ${TMUX_CONFIG_PATH}"
+
+# alias
+source ${ZDOTDIR_CONFIG}/alias.zsh

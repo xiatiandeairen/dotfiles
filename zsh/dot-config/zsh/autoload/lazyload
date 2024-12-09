@@ -11,10 +11,9 @@ function lazyload {
     eval "
       function $cmd {
         if ! type '$cmd' &>/dev/null; then
-          eval \"$load_cmd\" && command $cmd \"\$@\"
-        else
-          $cmd \"\$@\"
+          eval \"$load_cmd\"
         fi
+        $cmd \"\$@\"
       }
     "
   fi

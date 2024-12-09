@@ -15,18 +15,16 @@ export DOTFILES="${HOME}/dotfiles"
 
 # ZSH Home
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
-export ZDOTDIR_CONFIG="{ZDOTDIR}/config"
+export ZDOTDIR_CONFIG="${ZDOTDIR}/config"
 export ZDOTDIR_PLUGINS="${ZDOTDIR}/plugins"
-export ZDOTDIR_FUNCTIONS="${ZDOTDIR}/functions"
+export ZDOTDIR_AUTOLOAD="${ZDOTDIR}/autoload"
 export ZDOTDIR_MODULES="${ZDOTDIR}/modules"
-export ZDOTDIR_SNIPPETS="{ZDOTDIR}/snippets"
-export ZDOTDIR_SCRIPTS="{ZDOTDIR}/scripts"
-export HISTFILE="${ZDOTDIR}/.zhistory"
+export ZDOTDIR_SNIPPETS="${ZDOTDIR}/snippets"
+export ZDOTDIR_SCRIPTS="${ZDOTDIR}/scripts"
+export ZDOTDIR_CACHE="${ZDOTDIR}/cache"
+export HISTFILE="${ZDOTDIR}/dot-zhistory"
 export HISTSIZE=10000   # Maximum events for internal history
 export SAVEHIST=10000   # Maximum events in history file
-
-# fpath
-export fpath=($DOTFILES/zsh/functions ${fpath})
 
 # PATH
 [ -f ${ZDOTDIR}/path.zsh ] && source ${ZDOTDIR}/path.zsh

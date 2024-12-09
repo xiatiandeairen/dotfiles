@@ -57,5 +57,8 @@ export TIGRC_USER="${XDG_CONFIG_HOME}/tig/config/tigrc"
 # tmux
 export TMUX_CONFIG_PATH="${XDG_CONFIG_HOME}/tmux/tmux.conf"
 
+# tldr
+export TLDR_CACHE_DIR=“$XDG_CACHE_HOME/tldrc”
+
 # alias
 source ${ZDOTDIR_CONFIG}/alias.zsh

@@ -1,0 +1,21 @@
+# lazyload, eg. lazyload 'nvm' 'source ~/.nvm/nvm.sh'
+function lazyload {
+  local cmd="$1"
+  local load_cmd="$2"
+  
+  if command -v "$cmd" &>/dev/null; then
+    return 0
+  fi
+
+  if ! type "$cmd" &>/dev/null; then
+    eval "
+      function $cmd {
+        if ! type '$cmd' &>/dev/null; then
+          eval \"$load_cmd\" && command $cmd \"\$@\"
+        else
+          $cmd \"\$@\"
+        fi
+      }
+    "
+  fi
+}

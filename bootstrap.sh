@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function eval_once() {
+function eval_once {
     var_name="$1"
     output_file="$2"
 
@@ -25,19 +25,19 @@ function eval_once() {
     return $?
 }
 
-function apply() {
+function apply {
     local target="$1"
     $(which stow) -t ${HOME} ${target} --dotfiles --adopt --verbose -d ${DOTFILES}
 }
 
-function bootstrap() {
+function bootstrap {
     targets=(zsh brew bat broot eza tig tmux)
     for target in "${targets[@]}"; do
         apply ${target}
     done
 }
 
-function dot() {
+function dot {
     if [ $# -eq 0 ]; then
         echo "
             Usage: dotfiles <command> [target]

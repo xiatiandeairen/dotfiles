@@ -1,30 +1,3 @@
-#!/bin/bash
-
-function eval_once {
-    var_name="$1"
-    output_file="$2"
-
-    if [ -z "$var_name" ] || [ -z "$output_file" ]; then
-        echo "Error: Variable is empty or not set"
-        return 1
-    fi
-
-    local dir_path=$(dirname "$output_file")
-    if [ ! -d "$dir_path" ]; then
-        echo "Creating directory: $dir_path"
-        mkdir -p "$dir_path"
-        
-        # 检查目录创建是否成功
-        if [ $? -ne 0 ]; then
-            echo "Error: Failed to create directory"
-            return 1
-        fi
-    fi
-
-    printf "%s" "$var_name" > "$output_file"
-    return $?
-}
-
 function apply {
     local target="$1"
     $(which stow) -t ${HOME} ${target} --dotfiles --adopt --verbose -d ${DOTFILES}

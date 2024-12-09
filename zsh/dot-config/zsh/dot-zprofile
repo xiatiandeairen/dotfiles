@@ -1,28 +1,31 @@
+# fpath
+fpath=(${ZDOTDIR}/autoload ${fpath})
+
 # bootstrap
 [ -f ${DOTFILES}/bootstrap.sh ] && source ${DOTFILES}/bootstrap.sh 
 
-# lazyload, eg. lazyload nvm -- 'source ~/.nvm/nvm.sh'
-[ -f ${ZDOTDIR_PLUGINS}/zsh-lazyload/zsh-lazyload.zsh ] && source ${ZDOTDIR_PLUGINS}/zsh-lazyload/zsh-lazyload.zsh
+# autoload
+autoload -Uz lazyload cacheAsFile
 
 # stow
 export STOW_DIR=${DOTFILES}
 
-#brew
-lazyload brew -- '
-export BREW_CONFIG_PATH="${ZDOTDIR}/config/brew.sh"
-if [[ $(uname -m) == "arm64" ]]; then
-    brew_command="$(/opt/homebrew/bin/brew shellenv)"
-else
-    brew_command="$(/usr/local/Homebrew/bin/brew shellenv)"
-fi
-[ ! -f ${BREW_CONFIG_PATH} ] && eval_once "${brew_command}" "${BREW_CONFIG_PATH}"
-source ${BREW_CONFIG_PATH}
+# brew
+export BREW_CONFIG_PATH="${ZDOTDIR_CACHE}/brew.sh"
+lazyload 'brew' '
+    if [[ $(uname -m) == "arm64" ]]; then
+        brew_command="$(/opt/homebrew/bin/brew shellenv)"
+    else
+        brew_command="$(/usr/local/Homebrew/bin/brew shellenv)"
+    fi
+    [ ! -f ${BREW_CONFIG_PATH} ] && cacheAsFile "${brew_command}" "${BREW_CONFIG_PATH}"
+    source ${BREW_CONFIG_PATH}
 '
 
 # the fuck
-export FUCK_CONFIG_PATH="${ZDOTDIR}/config/thefuck.sh"
-[ ! -f ${FUCK_CONFIG_PATH} ] && eval_once "$(thefuck --alias)" "${FUCK_CONFIG_PATH}"
-lazyload fuck -- 'source ${FUCK_CONFIG_PATH}'
+export FUCK_CONFIG_PATH="${ZDOTDIR_CACHE}/thefuck.sh"
+[ ! -f ${FUCK_CONFIG_PATH} ] && cacheAsFile "$(thefuck --alias)" "${FUCK_CONFIG_PATH}"
+source ${FUCK_CONFIG_PATH}
 
 # zoxide
 export _ZO_DATA_DIR="${XDG_DATA_HOME}/zoxide"
@@ -30,23 +33,20 @@ export _ZO_ECHO=1
 export _ZO_RESOLVE_SYMLINKS=1
 export _ZO_MAXAGE=10000
 export _ZO_EXCLUDE_DIRS="$HOME/private/*"
-export ZOXIDE_CONFIG_PATH="${ZDOTDIR}/config/zoxide.sh"
-[ ! -f ${ZOXIDE_CONFIG_PATH} ] && eval_once "$(zoxide init zsh)" "${ZOXIDE_CONFIG_PATH}"
+export ZOXIDE_CONFIG_PATH="${ZDOTDIR_CACHE}/zoxide.sh"
+[ ! -f ${ZOXIDE_CONFIG_PATH} ] && cacheAsFile "$(zoxide init zsh)" "${ZOXIDE_CONFIG_PATH}"
 source ${ZOXIDE_CONFIG_PATH}
 
 # bat
 export BAT_CONFIG_DIR="${XDG_CONFIG_HOME}/bat"
 export BAT_CONFIG_PATH="${BAT_CONFIG_DIR}/bat.conf"
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
-alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # broot
-alias br=broot
 
 # fzf
-export FZF_CONFIG_PATH="${ZDOTDIR}/config/fzf.sh"
-[ ! -f ${FZF_CONFIG_PATH} ] && eval_once "$(fzf --zsh)" "${FZF_CONFIG_PATH}"
-lazyload fzf -- 'source ${FZF_CONFIG_PATH}'
+export FZF_CONFIG_PATH="${ZDOTDIR_CACHE}/fzf.sh"
+[ ! -f ${FZF_CONFIG_PATH} ] && cacheAsFile "$(fzf --zsh)" "${FZF_CONFIG_PATH}"
+source ${FZF_CONFIG_PATH}
 
 # eza
 export EZA_CONFIG_DIR="${XDG_CONFIG_HOME}/eza"
@@ -56,4 +56,6 @@ export TIGRC_USER="${XDG_CONFIG_HOME}/tig/config/tigrc"
 
 # tmux
 export TMUX_CONFIG_PATH="${XDG_CONFIG_HOME}/tmux/tmux.conf"
-alias tmux="tmux -f ${TMUX_CONFIG_PATH}"
+
+# alias
+source ${ZDOTDIR_CONFIG}/alias.zsh

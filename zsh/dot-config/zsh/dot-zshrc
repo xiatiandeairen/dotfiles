@@ -10,9 +10,6 @@ fi
 # complete
 autoload -U compinit && compinit
 
-# fpath
-export fpath=($DOTFILES/zsh/plugins ${fpath})
-
 # cd
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.

@@ -104,6 +104,15 @@ backup() {
     fi
 }
 
+# environment
+if [ -d /opt/homebrew/bin/ ]; then
+    PATH="/opt/homebrew/bin:${PATH}"
+elif [ -d /usr/local/Homebrew/bin ]; then
+    PATH="/usr/local/Homebrew/bin:${PATH}"
+fi
+
+# git
+git clone --recurse-submodules git@github.com:xiatiandeairen/dotfiles.git ${HOME}/dotfiles
 
 # install all needed cmd tools
 software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd")
@@ -113,7 +122,6 @@ for software in "${software_list[@]}"; do
 done
 print_message "success" "==> Step One: install success"
 
-
 # backup config
 print_message "success" "==> Step Two: backup existing config"
 paths=("${HOME}/.zshenv" "${HOME}/.config")
@@ -121,7 +129,6 @@ for path in "${paths[@]}"; do
     backup "$path"
 done
 print_message "success" "==> Step Two: backup success"
-
 
 # stow config
 print_message "success" "==> Step Three: stow new config"

@@ -1,2 +1,4 @@
 .backup/
 *.DS_Store
+.vscode/
+zsh/dot-config/zsh/cache/

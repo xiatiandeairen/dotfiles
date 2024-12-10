@@ -1,0 +1,69 @@
+" 历史记录
+set history=5000
+" 将 viminfo 存储路径设置为 ~/.viminfo
+set viminfofile=$MYVIMDIR/viminfo
+
+" Enable filetype plugins
+set nocompatible
+filetype plugin indent on
+syntax enable
+set encoding=utf8
+
+" 行号
+set number
+set relativenumber
+
+" 启用智能缩进
+set smartindent
+set autoindent
+set smarttab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab  
+
+" 自动换行
+set wrap
+
+" 开启行尾高亮
+set cursorline
+set ruler
+set cursorline
+
+" 启用命令行自动补全
+set wildmenu
+set wildmode=longest:full,full
+
+" 搜索
+set hlsearch
+set incsearch
+set ignorecase 
+set smartcase
+
+" 延迟屏幕更新,提高执行效率
+set lazyredraw
+
+" 设置状态行的颜色
+set laststatus=2
+set statusline=%F\ %y\ %m\ %r\ %=%l/%L\ %p%%
+
+" 设置备份文件的保存路径
+set backup
+set backupdir=$MYVIMDIR/backup//
+
+" 设置交换文件的保存路径
+set swapfile
+set directory=$MYVIMDIR/swap//
+
+" 自动保存文件
+au InsertLeave * silent! write
+
+" 设置 Python 文件的缩进
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
+
+" 设置 JavaScript 文件的缩进
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
+
+" 设置 HTML 文件的缩进
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
+

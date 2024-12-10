@@ -53,5 +53,10 @@ export TMUX_CONFIG_PATH="${XDG_CONFIG_HOME}/tmux/tmux.conf"
 # tldr
 export TLDR_CACHE_DIR=“${XDG_CACHE_HOME}/tldrc”
 
+# vim
+export MYVIMDIR="${XDG_CONFIG_HOME}/vim"
+export MYVIMRC="${MYVIMDIR}/vimrc" 
+export VIMINIT="source ${MYVIMRC}"
+
 # PATH
 [ -f ${ZDOTDIR}/path.zsh ] && source ${ZDOTDIR}/path.zsh

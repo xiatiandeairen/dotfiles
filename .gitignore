@@ -2,3 +2,5 @@
 *.DS_Store
 .vscode/
 zsh/dot-config/zsh/cache/
+vim/dot-config/vim/backup/
+vim/dot-config/vim/swap/

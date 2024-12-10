@@ -34,5 +34,10 @@ export FZF_CONFIG_PATH="${ZDOTDIR_CACHE}/fzf.sh"
 [ ! -f ${FZF_CONFIG_PATH} ] && cacheAsFile "$(fzf --zsh)" "${FZF_CONFIG_PATH}"
 source ${FZF_CONFIG_PATH}
 
+# direnv
+export DIRENV_CONFIG_PATH="${ZDOTDIR_CACHE}/direnv.sh"
+[ ! -f ${DIRENV_CONFIG_PATH} ] && cacheAsFile "$(direnv hook zsh)" "${DIRENV_CONFIG_PATH}"
+source ${DIRENV_CONFIG_PATH}
+
 # alias
 source ${ZDOTDIR_CONFIG}/alias.zsh

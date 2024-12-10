@@ -4,7 +4,7 @@ function apply {
 }
 
 function bootstrap {
-    targets=(zsh brew bat broot eza tig tmux zoxide vim)
+    targets=(zsh brew bat broot eza tig tmux zoxide vim thefuck)
     for target in "${targets[@]}"; do
         apply ${target}
     done

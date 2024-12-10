@@ -5,7 +5,7 @@ fpath=(${ZDOTDIR}/autoload ${fpath})
 [ -f ${DOTFILES}/bootstrap.sh ] && source ${DOTFILES}/bootstrap.sh 
 
 # autoload
-autoload -Uz lazyload cacheAsFile
+autoload -Uz lazyload cacheAsFile cleanInvalidSymlink
 
 # brew
 export BREW_CONFIG_PATH="${ZDOTDIR_CACHE}/brew.sh"

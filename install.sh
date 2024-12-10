@@ -112,10 +112,12 @@ elif [ -d /usr/local/Homebrew/bin ]; then
 fi
 
 # git
-git clone --recurse-submodules git@github.com:xiatiandeairen/dotfiles.git ${HOME}/dotfiles
+if [ ! -d ${HOME}/dotfiles ]; then
+    git clone --recurse-submodules git@github.com:xiatiandeairen/dotfiles.git ${HOME}/dotfiles
+fi
 
 # install all needed cmd tools
-software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd")
+software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd" "gum" "direnv")
 print_message "success" "==> Step One: install all needed command line tools"
 for software in "${software_list[@]}"; do
     install_if_missing "$software"

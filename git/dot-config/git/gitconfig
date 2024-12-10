@@ -1,0 +1,23 @@
+[http]
+	postBuffer = 524288000
+[filesystem "Oracle Corporation|1.8.0_131|/dev/disk1s1"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[core]
+	quotepath = false
+	excludesfile = ~/.config/git/.gitignore_global
+	filemode = false
+[commit]
+	template = ~/.config/git/.stCommitMsg
+[filesystem "Oracle Corporation|1.8.0_131|/dev/disk1s5"]
+	timestampResolution = 1015 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true

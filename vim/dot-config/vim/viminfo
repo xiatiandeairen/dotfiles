@@ -1,0 +1,968 @@
+# 这个 viminfo 文件是由 Vim 9.1 生成的。
+# 如果要自行修改请特别小心！
+
+# Viminfo version
+|1,4
+
+# 此文件建立时 'encoding' 的值
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 最后 搜索模式:
+~MSle0~/SHOW_ON_COMMAND
+
+# 最后 替换 搜索模式:
+~MSle0&re
+
+# 最近的替换字符串:
+$
+
+# 命令行 历史记录 (从新到旧):
+:wq
+|2,0,1733754711,,"wq"
+:q
+|2,0,1733496670,,"q"
+:Ex
+|2,0,1732890272,,"Ex"
+:e .
+|2,0,1732890267,,"e ."
+:q!
+|2,0,1732449153,,"q!"
+:help read
+|2,0,1732448865,,"help read"
+:h put
+|2,0,1732448834,,"h put"
+:enew|put=execute('aaa')
+|2,0,1732448810,,"enew|put=execute('aaa')"
+:enew|put execute('aaa')
+|2,0,1732448796,,"enew|put execute('aaa')"
+:ls
+|2,0,1732448781,,"ls"
+:enew
+|2,0,1732448778,,"enew"
+:shell
+|2,0,1732448611,,"shell"
+:term zsh
+|2,0,1732448596,,"term zsh"
+:h ex-cmd-index
+|2,0,1732447871,,"h ex-cmd-index"
+:w | grep linux
+|2,0,1732447747,,"w | grep linux"
+:r !ls
+|2,0,1732447736,,"r !ls"
+:files
+|2,0,1732418567,,"files"
+:h gf
+|2,0,1732418412,,"h gf"
+:h jump
+|2,0,1732417238,,"h jump"
+:tselect
+|2,0,1732417199,,"tselect"
+:function
+|2,0,1732417086,,"function"
+:functions
+|2,0,1732417081,,"functions"
+:g/re/d
+|2,0,1732373509,,"g/re/d"
+:h reg
+|2,0,1732372437,,"h reg"
+:reg a
+|2,0,1732372423,,"reg a"
+:p 2
+|2,0,1732372402,,"p 2"
+:p2
+|2,0,1732372398,,"p2"
+:pa
+|2,0,1732372383,,"pa"
+:put a
+|2,0,1732372370,,"put a"
+:p a
+|2,0,1732372364,,"p a"
+:p @a
+|2,0,1732372355,,"p @a"
+:put @a
+|2,0,1732372252,,"put @a"
+:'<,'>normal @a
+|2,0,1732372232,,"'<,'>normal @a"
+:let i+=1
+|2,0,1732372209,,"let i+=1"
+:let i=0
+|2,0,1732372109,,"let i=0"
+:help '
+|2,0,1732367794,,"help '"
+:marks
+|2,0,1732367743,,"marks"
+:changes
+|2,0,1732367256,,"changes"
+:jumps
+|2,0,1732367219,,"jumps"
+:m .+2
+|2,0,1732364472,,"m .+2"
+:m 0
+|2,0,1732364460,,"m 0"
+:m .-1
+|2,0,1732364446,,"m .-1"
+:m.-1
+|2,0,1732364424,,"m.-1"
+:echo @=
+|2,0,1732364389,,"echo @="
+:echo @:
+|2,0,1732364377,,"echo @:"
+:'<,'>normal A;
+|2,0,1732364217,,"'<,'>normal A;"
+:w
+|2,0,1732350643,,"w"
+:e hello
+|2,0,1732350641,,"e hello"
+:cd test
+|2,0,1732350617,,"cd test"
+:help
+|2,0,1732350376,,"help"
+
+# 查找字符串 历史记录 (从新到旧):
+?/SHOW_ON_COMMAND
+|2,1,1733496609,47,"SHOW_ON_COMMAND"
+??\a
+|2,1,1732890341,63,"\\a"
+? @$
+|2,1,1732890341,,"@$"
+? re
+|2,1,1732373509,,"re"
+?//
+|2,1,1732372838,47,"/"
+?/reg/e
+|2,1,1732372821,47,"reg/e"
+?/test
+|2,1,1732350656,47,"test"
+?/t
+|2,1,1732350490,47,"t"
+?/variable
+|2,1,1731683144,47,"variable"
+?/go
+|2,1,1722774046,47,"go"
+?/go/2
+|2,1,1722774018,47,"go/2"
+?/go/11
+|2,1,1722774005,47,"go/11"
+?/\t
+|2,1,1722764353,47,"\\t"
+?/\<num
+|2,1,1722764235,47,"\\<num"
+? search
+|2,1,1722764079,,"search"
+? \<search\>
+|2,1,1722764049,,"\\<search\\>"
+?/j
+|2,1,1722764034,47,"j"
+?/shell
+|2,1,1722666835,47,"shell"
+?/bin
+|2,1,1718113412,47,"bin"
+?/encoding
+|2,1,1718076455,47,"encoding"
+? run
+|2,1,1717350018,,"run"
+? RUN
+|2,1,1717350006,,"RUN"
+?/utf
+|2,1,1717171907,47,"utf"
+
+# 表达式 历史记录 (从新到旧):
+=i
+|2,2,1732372173,,"i"
+=12+14
+|2,2,1732347153,,"12+14"
+=11+12
+|2,2,1732347143,,"11+12"
+=16+12
+|2,2,1732347133,,"16+12"
+=20+13
+|2,2,1727698964,,"20+13"
+=6*35
+|2,2,1717422814,,"6*35"
+
+# 输入行 历史记录 (从新到旧):
+@[{y(es)},n(o),a(ll),q(uit)] y
+|2,3,1732350677,,"[{y(es)},n(o),a(ll),q(uit)] y"
+@test
+|2,3,1732350445,,"test"
+
+# 输入行 历史记录 (从新到旧):
+
+# 寄存器:
+"0	LINE	0
+	>>>>>>> test
+|3,0,0,1,1,0,1732890341,">>>>>>> test"
+""1	LINE	0
+		active = true
+|3,1,1,1,1,0,1733754707,"	active = true"
+"2	LINE	0
+		url = https://github.com/qoomon/zsh-lazyload.git
+|3,0,2,1,1,0,1733754707,"	url = https://github.com/qoomon/zsh-lazyload.git"
+"3	LINE	0
+	[submodule "zsh/dot-config/zsh/plugins/zsh-lazyload"]
+|3,0,3,1,1,0,1733754706,"[submodule \"zsh/dot-config/zsh/plugins/zsh-lazyload\"]"
+"4	LINE	0
+		active = true
+|3,0,4,1,1,0,1733507800,"	active = true"
+"5	LINE	0
+		url = https://github.com/romkatv/zsh-defer.git
+|3,0,5,1,1,0,1733507800,"	url = https://github.com/romkatv/zsh-defer.git"
+"6	LINE	0
+	[submodule "zsh/dot-config/zsh/plugins/zsh-defer"]
+|3,0,6,1,1,0,1733507799,"[submodule \"zsh/dot-config/zsh/plugins/zsh-defer\"]"
+"7	LINE	0
+		active = true
+|3,0,7,1,1,0,1733501959,"	active = true"
+"8	LINE	0
+		url = https://github.com/romkatv/gitstatus.git
+|3,0,8,1,1,0,1733501958,"	url = https://github.com/romkatv/gitstatus.git"
+"9	LINE	0
+	[submodule "zsh/dot-config/zsh/plugins/gitstatus"]
+|3,0,9,1,1,0,1733501958,"[submodule \"zsh/dot-config/zsh/plugins/gitstatus\"]"
+"a@	CHAR	0
+	I=i).:�kb:let i+=1
+|3,2,10,0,1,0,1732372211,"I=i).:�kb:let i+=1"
+"b	CHAR	0
+	xxx
+|3,0,11,0,1,0,1732347301,"xxx"
+"c	LINE	0
+	it is only a test word;;
+|3,0,12,1,1,0,1727699265,"it is only a test word;;"
+"k	CHAR	0
+	��a
+|3,0,20,0,1,0,1727699113,"��a"
+"-	CHAR	0
+	*
+|3,0,36,0,1,0,1733149405,"*"
+
+# 文件标记:
+'0  19  0  ~/dotfiles/.git/config
+|4,48,19,0,1733754711,"~/dotfiles/.git/config"
+'1  22  0  ~/dotfiles/.git/config
+|4,49,22,0,1733507804,"~/dotfiles/.git/config"
+'2  16  0  ~/dotfiles/.git/config
+|4,50,16,0,1733501962,"~/dotfiles/.git/config"
+'3  16  0  ~/dotfiles/.git/config
+|4,51,16,0,1733501962,"~/dotfiles/.git/config"
+'4  16  0  ~/dotfiles/.git/config
+|4,52,16,0,1733501962,"~/dotfiles/.git/config"
+'5  16  0  ~/dotfiles/.git/config
+|4,53,16,0,1733501962,"~/dotfiles/.git/config"
+'6  1488  42  ~/.p10k.zsh
+|4,54,1488,42,1733496670,"~/.p10k.zsh"
+'7  2  9  ~/dotfiles/.gitignore
+|4,55,2,9,1733328796,"~/dotfiles/.gitignore"
+'8  1  0  ~/.config/zsh/.zprofile
+|4,56,1,0,1733324678,"~/.config/zsh/.zprofile"
+'9  3  8  ~/dotfiles/.git/COMMIT_EDITMSG
+|4,57,3,8,1733274428,"~/dotfiles/.git/COMMIT_EDITMSG"
+
+# 跳转列表 (从新到旧):
+-'  19  0  ~/dotfiles/.git/config
+|4,39,19,0,1733754711,"~/dotfiles/.git/config"
+-'  1  0  ~/dotfiles/.git/config
+|4,39,1,0,1733754702,"~/dotfiles/.git/config"
+-'  22  0  ~/dotfiles/.git/config
+|4,39,22,0,1733507804,"~/dotfiles/.git/config"
+-'  1  0  ~/dotfiles/.git/config
+|4,39,1,0,1733507793,"~/dotfiles/.git/config"
+-'  16  0  ~/dotfiles/.git/config
+|4,39,16,0,1733501962,"~/dotfiles/.git/config"
+-'  16  0  ~/dotfiles/.git/config
+|4,39,16,0,1733501962,"~/dotfiles/.git/config"
+-'  16  0  ~/dotfiles/.git/config
+|4,39,16,0,1733501962,"~/dotfiles/.git/config"
+-'  1  0  ~/dotfiles/.git/config
+|4,39,1,0,1733501948,"~/dotfiles/.git/config"
+-'  1488  42  ~/.p10k.zsh
+|4,39,1488,42,1733496670,"~/.p10k.zsh"
+-'  1488  42  ~/.p10k.zsh
+|4,39,1488,42,1733496670,"~/.p10k.zsh"
+-'  1488  42  ~/.p10k.zsh
+|4,39,1488,42,1733496670,"~/.p10k.zsh"
+-'  1488  42  ~/.p10k.zsh
+|4,39,1488,42,1733496670,"~/.p10k.zsh"
+-'  1488  42  ~/.p10k.zsh
+|4,39,1488,42,1733496670,"~/.p10k.zsh"
+-'  1488  42  ~/.p10k.zsh
+|4,39,1488,42,1733496670,"~/.p10k.zsh"
+-'  1488  42  ~/.p10k.zsh
+|4,39,1488,42,1733496670,"~/.p10k.zsh"
+-'  1488  42  ~/.p10k.zsh
+|4,39,1488,42,1733496670,"~/.p10k.zsh"
+-'  1447  33  ~/.p10k.zsh
+|4,39,1447,33,1733496659,"~/.p10k.zsh"
+-'  1447  33  ~/.p10k.zsh
+|4,39,1447,33,1733496659,"~/.p10k.zsh"
+-'  1447  33  ~/.p10k.zsh
+|4,39,1447,33,1733496659,"~/.p10k.zsh"
+-'  1447  33  ~/.p10k.zsh
+|4,39,1447,33,1733496659,"~/.p10k.zsh"
+-'  1447  33  ~/.p10k.zsh
+|4,39,1447,33,1733496659,"~/.p10k.zsh"
+-'  1447  33  ~/.p10k.zsh
+|4,39,1447,33,1733496659,"~/.p10k.zsh"
+-'  1447  33  ~/.p10k.zsh
+|4,39,1447,33,1733496659,"~/.p10k.zsh"
+-'  1447  33  ~/.p10k.zsh
+|4,39,1447,33,1733496659,"~/.p10k.zsh"
+-'  1409  32  ~/.p10k.zsh
+|4,39,1409,32,1733496658,"~/.p10k.zsh"
+-'  1362  30  ~/.p10k.zsh
+|4,39,1362,30,1733496658,"~/.p10k.zsh"
+-'  1409  32  ~/.p10k.zsh
+|4,39,1409,32,1733496658,"~/.p10k.zsh"
+-'  1362  30  ~/.p10k.zsh
+|4,39,1362,30,1733496658,"~/.p10k.zsh"
+-'  1409  32  ~/.p10k.zsh
+|4,39,1409,32,1733496658,"~/.p10k.zsh"
+-'  1362  30  ~/.p10k.zsh
+|4,39,1362,30,1733496658,"~/.p10k.zsh"
+-'  1409  32  ~/.p10k.zsh
+|4,39,1409,32,1733496658,"~/.p10k.zsh"
+-'  1362  30  ~/.p10k.zsh
+|4,39,1362,30,1733496658,"~/.p10k.zsh"
+-'  1409  32  ~/.p10k.zsh
+|4,39,1409,32,1733496658,"~/.p10k.zsh"
+-'  1362  30  ~/.p10k.zsh
+|4,39,1362,30,1733496658,"~/.p10k.zsh"
+-'  1409  32  ~/.p10k.zsh
+|4,39,1409,32,1733496658,"~/.p10k.zsh"
+-'  1362  30  ~/.p10k.zsh
+|4,39,1362,30,1733496658,"~/.p10k.zsh"
+-'  1409  32  ~/.p10k.zsh
+|4,39,1409,32,1733496658,"~/.p10k.zsh"
+-'  1362  30  ~/.p10k.zsh
+|4,39,1362,30,1733496658,"~/.p10k.zsh"
+-'  1409  32  ~/.p10k.zsh
+|4,39,1409,32,1733496658,"~/.p10k.zsh"
+-'  1362  30  ~/.p10k.zsh
+|4,39,1362,30,1733496658,"~/.p10k.zsh"
+-'  1236  38  ~/.p10k.zsh
+|4,39,1236,38,1733496657,"~/.p10k.zsh"
+-'  1236  38  ~/.p10k.zsh
+|4,39,1236,38,1733496657,"~/.p10k.zsh"
+-'  1236  38  ~/.p10k.zsh
+|4,39,1236,38,1733496657,"~/.p10k.zsh"
+-'  1236  38  ~/.p10k.zsh
+|4,39,1236,38,1733496657,"~/.p10k.zsh"
+-'  1236  38  ~/.p10k.zsh
+|4,39,1236,38,1733496657,"~/.p10k.zsh"
+-'  1236  38  ~/.p10k.zsh
+|4,39,1236,38,1733496657,"~/.p10k.zsh"
+-'  1236  38  ~/.p10k.zsh
+|4,39,1236,38,1733496657,"~/.p10k.zsh"
+-'  1236  38  ~/.p10k.zsh
+|4,39,1236,38,1733496657,"~/.p10k.zsh"
+-'  2  0  ~/.p10k.zsh
+|4,39,2,0,1733496609,"~/.p10k.zsh"
+-'  2  0  ~/.p10k.zsh
+|4,39,2,0,1733496609,"~/.p10k.zsh"
+-'  2  0  ~/.p10k.zsh
+|4,39,2,0,1733496609,"~/.p10k.zsh"
+-'  2  0  ~/.p10k.zsh
+|4,39,2,0,1733496609,"~/.p10k.zsh"
+-'  2  0  ~/.p10k.zsh
+|4,39,2,0,1733496609,"~/.p10k.zsh"
+-'  2  0  ~/.p10k.zsh
+|4,39,2,0,1733496609,"~/.p10k.zsh"
+-'  2  0  ~/.p10k.zsh
+|4,39,2,0,1733496609,"~/.p10k.zsh"
+-'  2  0  ~/.p10k.zsh
+|4,39,2,0,1733496609,"~/.p10k.zsh"
+-'  1  0  ~/.p10k.zsh
+|4,39,1,0,1733496601,"~/.p10k.zsh"
+-'  1  0  ~/.p10k.zsh
+|4,39,1,0,1733496601,"~/.p10k.zsh"
+-'  1  0  ~/.p10k.zsh
+|4,39,1,0,1733496601,"~/.p10k.zsh"
+-'  1  0  ~/.p10k.zsh
+|4,39,1,0,1733496601,"~/.p10k.zsh"
+-'  1  0  ~/.p10k.zsh
+|4,39,1,0,1733496601,"~/.p10k.zsh"
+-'  1  0  ~/.p10k.zsh
+|4,39,1,0,1733496601,"~/.p10k.zsh"
+-'  1  0  ~/.p10k.zsh
+|4,39,1,0,1733496601,"~/.p10k.zsh"
+-'  1  0  ~/.p10k.zsh
+|4,39,1,0,1733496601,"~/.p10k.zsh"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  2  9  ~/dotfiles/.gitignore
+|4,39,2,9,1733328796,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/dotfiles/.gitignore
+|4,39,1,0,1733328651,"~/dotfiles/.gitignore"
+-'  1  0  ~/.config/zsh/.zprofile
+|4,39,1,0,1733324678,"~/.config/zsh/.zprofile"
+-'  1  0  ~/.config/zsh/.zprofile
+|4,39,1,0,1733324678,"~/.config/zsh/.zprofile"
+-'  1  0  ~/.config/zsh/.zprofile
+|4,39,1,0,1733324678,"~/.config/zsh/.zprofile"
+-'  1  0  ~/.config/zsh/.zprofile
+|4,39,1,0,1733324678,"~/.config/zsh/.zprofile"
+
+# 文件内的标记历史记录 (从新到旧):
+
+> ~/dotfiles/.git/config
+	*	1733754710	0
+	"	19	0
+	^	10	50
+	.	19	0
+	+	10	49
+	+	16	0
+	+	19	0
+	a	10	21
+
+> ~/.p10k.zsh
+	*	1733496669	0
+	"	1488	42
+
+> ~/dotfiles/.gitignore
+	*	1733328796	0
+	"	2	9
+	^	2	10
+	.	2	9
+	+	1	7
+	+	2	9
+
+> ~/.config/zsh/.zprofile
+	*	1733324677	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/dotfiles/.git/COMMIT_EDITMSG
+	*	1733274426	0
+	"	3	8
+	^	3	9
+	.	3	8
+	+	3	8
+
+> ~/.config/zsh/.zshrc
+	*	1733241230	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/pi_netrw.txt
+	*	1732890340	0
+	"	1084	0
+
+> ~/Downloads/test/first.txt
+	*	1732804310	0
+	"	3	0
+	.	4	0
+	+	2	0
+	+	3	0
+	+	4	0
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/insert.txt
+	*	1732448865	0
+	"	2040	18
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/change.txt
+	*	1732448852	0
+	"	1126	45
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/index.txt
+	*	1732448193	0
+	"	1560	34
+
+> ~/a.txt
+	*	1732447762	0
+	"	35	0
+	^	35	0
+	.	35	0
+	+	36	3
+	+	36	0
+	+	74	0
+	+	76	0
+	+	77	0
+	+	75	0
+	+	36	9
+	+	1	0
+	+	37	1
+	+	38	0
+	+	41	5
+	+	44	0
+	+	46	0
+	+	49	0
+	+	52	1
+	+	1	3
+	+	52	4
+	+	53	0
+	+	54	0
+	+	55	0
+	+	56	0
+	+	58	1
+	+	74	0
+	+	73	6
+	+	1	4
+	+	2	0
+	+	35	0
+	m	36	33
+
+> ~/b.txt
+	*	1732447652	0
+	"	1	4
+	^	1	6
+	.	1	5
+	+	1	5
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/editing.txt
+	*	1732418471	0
+	"	399	17
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/motion.txt
+	*	1732417602	0
+	"	1035	0
+	a	782	0
+
+> ~/test/hello
+	*	1732350643	0
+	"	1	0
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/help.txt
+	*	1732350376	0
+	"	1	0
+
+> ~/Library/Caches/Homebrew/abseil--20240722.0
+	*	1732350268	0
+	"	1	0
+
+> ~/Library/Caches/Homebrew/a.txt
+	*	1732350072	0
+	"	12	6
+	^	12	9
+	.	12	6
+	+	2	3
+	+	3	3
+	+	3	10
+	+	3	12
+	+	3	5
+	+	2	0
+	+	3	10
+	+	7	1
+	+	6	2
+	+	3	4
+	+	3	7
+	+	4	0
+	+	7	1
+	+	5	0
+	+	7	0
+	+	1	0
+	+	8	0
+	+	9	0
+	+	10	11
+	+	12	6
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/repeat.txt
+	*	1731686590	0
+	"	332	0
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/eval.txt
+	*	1731683378	0
+	"	2701	30
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/helphelp.txt
+	*	1731683191	0
+	"	152	0
+
+> ~/shell.nix
+	*	1731596959	0
+	"	16	0
+	^	17	2
+	.	16	0
+	+	17	1
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+
+> ~/test_nix.sh
+	*	1731573921	0
+	"	6	68
+	^	6	69
+	.	6	68
+	+	6	68
+
+> ~/Work/CodePratice/javascript/async-流程控制串行执行.js
+	*	1729928722	0
+	"	15	30
+	^	21	22
+	.	15	29
+	+	4	35
+	+	5	64
+	+	6	38
+	+	9	23
+	+	10	35
+	+	17	29
+	+	21	21
+	+	15	29
+
+> ~/Work/CodePratice/javascript/OOP-自定义new命令.js
+	*	1729926388	0
+	"	1	0
+	^	9	22
+	.	9	21
+	+	1	45
+	+	2	53
+	+	4	7
+	+	2	6
+	+	3	6
+	+	4	55
+	+	5	50
+	+	6	76
+	+	9	27
+	+	13	32
+	+	14	14
+	+	1	20
+	+	9	21
+
+> ~/linux/docker/Dockerfile
+	*	1729770250	0
+	"	2	0
+	.	2	0
+	+	2	0
+
+> ~/linux/docker/start-gdb.sh
+	*	1729769667	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/linux/docker/build-kernel.sh
+	*	1729769641	0
+	"	1	0
+	^	5	0
+	.	1	0
+	+	1	0
+
+> ~/.zshenv
+	*	1729597206	0
+	"	28	0
+	^	28	128
+	.	28	0
+	+	22	42
+	+	21	23
+	+	2	0
+	+	28	42
+	+	28	22
+	+	28	0
+
+> ~/Work/CodePratice/javascript/function-模拟私有属性.js
+	*	1729597105	0
+	"	1	0
+	^	15	30
+	.	15	29
+	+	1	23
+	+	11	0
+	+	10	0
+	+	4	33
+	+	6	0
+	+	5	24
+	+	9	0
+	+	13	27
+	+	14	14
+	+	1	16
+	+	13	20
+	+	14	22
+	+	15	29
+
+> ~/Work/CodePratice/javascript/MyPromise.js
+	*	1729584525	0
+	"	1	0
+	^	4	16
+	.	4	15
+	+	3	0
+	+	2	29
+	+	4	15
+
+> ~/Work/CodePratice/javascript/promise/MyPromise.js
+	*	1729584404	0
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/Work/CodePratice/python/urllib_test.py
+	*	1727807448	0
+	"	4	37
+	^	4	38
+	.	4	37
+	+	3	56
+	+	4	37
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/builtin.txt
+	*	1727701784	0
+	"	10539	23
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/term.txt
+	*	1727701780	0
+	"	526	64
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/pattern.txt
+	*	1727698921	0
+	"	84	0
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/intro.txt
+	*	1727698906	0
+	"	364	34
+
+> ~/IdeaProjects/codecrafters-git-java/src/main/java/Main.java
+	*	1727189931	0
+	"	11	4
+	.	11	0
+	+	11	4
+	+	12	4
+	+	13	0
+	+	11	0
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/quickref.txt
+	*	1722774719	0
+	"	190	37
+	a	172	24
+
+> /private/var/folders/f0/g1svv6sx4tj1jlp7qsx3x95w0000gn/T/tutorGY7jAd
+	*	1722661973	0
+	"	524	5
+	.	199	2
+	+	89	0
+	+	199	2
+
+> /private/var/folders/f0/g1svv6sx4tj1jlp7qsx3x95w0000gn/T/tutorNJco3f
+	*	1722611683	0
+	"	4	0
+
+> /usr/local/Cellar/macvim/9.1.0/MacVim.app/Contents/Resources/vim/runtime/doc/usr_41.txt
+	*	1722524368	0
+	"	356	67
+
+> ~/Work/CodePratice/web/web基础/source_01/demo/demo01.html
+	*	1719400487	0
+	"	7	0
+
+> ~/Work/CodePratice/node.js/startup_node/ejs_test.js
+	*	1719126417	0
+	"	3	11
+	^	3	22
+	.	3	21
+	+	3	68
+	+	2	0
+	+	9	48
+	+	10	25
+	+	11	47
+	+	12	17
+	+	17	2
+	+	3	21
+
+> ~/Work/CodePratice/node.js/startup_node/index.js
+	*	1719047014	0
+	"	5	51
+	^	5	52
+	.	5	51
+	+	2	21
+	+	1	34
+	+	5	51
+
+> ~/Work/CodePratice/c/startup/src/main.c
+	*	1718786372	0
+	"	1	4
+	^	5	17
+	.	5	16
+	+	7	6
+	+	4	29
+	+	5	16
+
+> ~/Work/CodePratice/c/Makefile
+	*	1718785790	0
+	"	1	0
+	.	1	0
+	+	1	17
+	+	1	0
+
+> ~/Work/CodePratice/c/make
+	*	1718785546	0
+	"	1	0
+
+> ~/Downloads/testScan/flaskDemo/test_angel.py
+	*	1718208665	0
+	"	3	36
+	^	3	37
+	.	3	36
+	+	3	36
+
+> ~/Downloads/testScan/flaskDemo/angel.py
+	*	1718208630	0
+	"	2	70
+	^	2	71
+	.	2	70
+	+	2	70
+
+> ~/.ssh/config
+	*	1718163035	0
+	"	3	9
+	^	3	10
+	.	3	9
+	+	1	0
+	+	1	8
+	+	8	0
+	+	9	1
+	+	1	0
+	+	1	15
+	+	1	29
+	+	1	20
+	+	1	0
+	+	1	15
+	+	6	32
+	+	3	9
+
+> /private/etc/ssh/_config
+	*	1718162646	0
+	"	1	0
+
+> ~/.ssh/known_hosts
+	*	1718160159	0
+	"	1	0
+
+> ~/.ssh/id_ed25519.pub
+	*	1718116684	0
+	"	1	0
+
+> ~/.ssh/id_rsa.pub
+	*	1718116590	0
+	"	1	0
+
+> ~/.config/kitty/kitty.conf
+	*	1718076461	0
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/Downloads/testScan/flaskDemo/a.txt
+	*	1717476072	0
+	"	1	0
+	^	16	5
+	.	16	4
+	+	1	0
+	+	1	2
+	+	1	3
+	+	1	2
+	+	1	1
+	+	1	2
+	+	1	1
+	+	1	3
+	+	1	1
+	+	1	2
+	+	1	1
+	+	1	4
+	+	1	3
+	+	1	0
+	+	25	17
+	+	25	0
+	+	1	3
+	+	1	1
+	+	1	0
+	+	24	0
+	+	17	1
+	+	18	0
+	+	22	0
+	+	17	0
+	+	18	0
+	+	17	7
+	+	18	0
+	+	17	3
+	+	15	6
+	+	16	4
+
+> ~/Downloads/testScan/flaskDemo/Dockerfile
+	*	1717405586	0
+	"	22	0
+	^	2	20
+	.	9	0
+	+	3	0
+	+	2	0
+	+	1	0
+	+	9	0
+
+> ~/Downloads/testScan/flaskDemo/Docker
+	*	1717347104	0
+	"	1	0
+
+> ~/Downloads/testScan/flask-demo/requirements.txt
+	*	1717205010	0
+	"	15	16
+	^	15	17
+	.	15	16
+	+	15	16
+
+> /usr/local/etc/my.cnf
+	*	1717161292	0
+	"	4	0
+	.	5	0
+	+	5	0
+
+> ~/.DS_Store
+	"	60	0

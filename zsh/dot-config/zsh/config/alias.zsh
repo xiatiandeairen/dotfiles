@@ -10,3 +10,5 @@ alias tmux="tmux -f ${TMUX_CONFIG_PATH}"
 
 # custom
 alias delete-dsstore='find . -name ".DS_Store" -exec rm -f {} \;'
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index

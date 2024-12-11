@@ -9,11 +9,16 @@ alias br=broot
 alias tmux="tmux -f ${TMUX_CONFIG_PATH}"
 
 # eza
-local default_opts="--git --icons --group-directories-first --sort=name --header"
-# set aliases using options from env var if available
-alias e='eza '"${EZA_CMD_OPTS:-$default_opts}" # base implementation
+local default_eza_opts="--git --icons --group-directories-first --sort=name --header"
+alias e='eza '"${default_eza_opts}" # base implementation
 alias el='e -lh --no-user' # mid form -user/group/hidden
 alias et='el --tree -L 3' # mid form tree listing
+
+# fd, -e / --extension: 查找特定扩展名的文件, -p / --path: 指定搜索的路径, -x / --exec: 对每个找到的文件执行命令
+local default_fd_opts="-s -E .git -E node_module -E '*.log' -E '*.bak'"
+alias _fd='fd '"${default_fd_opts}"
+alias fdf='_fd -t f'
+alias fdd='_fd -t d'
 
 # custom
 alias delete-dsstore='find . -name ".DS_Store" -exec rm -f {} \;'

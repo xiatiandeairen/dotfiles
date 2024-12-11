@@ -1,0 +1,1 @@
+brew install java gradle maven@3.6

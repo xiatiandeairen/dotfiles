@@ -4,3 +4,6 @@
 [submodule "zsh/dot-config/zsh/plugins/zsh-bench"]
 	path = zsh/dot-config/zsh/plugins/zsh-bench
 	url = https://github.com/romkatv/zsh-bench.git
+[submodule "zsh/dot-config/zsh/plugins/zaw"]
+	path = zsh/dot-config/zsh/plugins/zaw
+	url = https://github.com/zsh-users/zaw.git

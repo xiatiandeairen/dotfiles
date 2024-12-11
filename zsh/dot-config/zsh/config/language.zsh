@@ -1,0 +1,10 @@
+# nvm
+export NVM_DIR="${XDG_CONFIG_HOME}/nvm"
+export NRM_HOME="${XDG_CONFIG_HOME}/nrm"
+export NPM_HOME="${XDG_CONFIG_HOME}/npm"
+export PNPM_HOME="${XDG_CONFIG_HOME}/pnpm"
+export npm_config_userconfig="${NPM_HOME}/npmrc"
+export npm_config_cache="${XDG_CACHE_HOME}/npm"
+export npm_config_prefix="${NPM_HOME}/npm-global"
+export PNPM_CONFIG_HOME="${PNPM_HOME}/config"
+export PNPM_STORE_PATH="${XDG_CACHE_HOME}/pnpm"

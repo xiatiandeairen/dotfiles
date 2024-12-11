@@ -18,4 +18,4 @@ alias et='el --tree -L 3' # mid form tree listing
 # custom
 alias delete-dsstore='find . -name ".DS_Store" -exec rm -f {} \;'
 alias d='dirs -v'
-for index ({1..9}) alias "$index"="cd +${index}"; unset index
+for index ({1..5}) alias "$index"="cd +${index}"; unset index

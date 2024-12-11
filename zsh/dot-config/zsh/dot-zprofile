@@ -43,3 +43,4 @@ source ${DIRENV_CONFIG_PATH}
 
 # alias
 source ${ZDOTDIR_CONFIG}/alias.zsh
+[ -f ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh ] && source ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh

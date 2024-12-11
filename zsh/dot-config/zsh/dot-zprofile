@@ -41,6 +41,8 @@ export DIRENV_CONFIG_PATH="${ZDOTDIR_CACHE}/direnv.sh"
 source ${DIRENV_CONFIG_PATH}
 '
 
+# zaw
+[ -f ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh ] && source ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh
+
 # alias
 source ${ZDOTDIR_CONFIG}/alias.zsh
-[ -f ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh ] && source ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh

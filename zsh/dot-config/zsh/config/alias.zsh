@@ -15,10 +15,14 @@ alias el='e -lh --no-user' # mid form -user/group/hidden
 alias et='el --tree -L 3' # mid form tree listing
 
 # fd, -e / --extension: 查找特定扩展名的文件, -p / --path: 指定搜索的路径, -x / --exec: 对每个找到的文件执行命令
-local default_fd_opts="-s -E .git -E node_module -E '*.log' -E '*.bak'"
+local default_fd_opts="-s -E venv -E .git -E node_module -E '*.log' -E '*.bak'"
 alias _fd='fd '"${default_fd_opts}"
 alias fdf='_fd -t f'
 alias fdd='_fd -t d'
+
+# ack 
+local default_ack_opts="-i --context=5 --color"
+alias g='ack '"${default_ack_opts}"
 
 # custom
 alias delete-dsstore='find . -name ".DS_Store" -exec rm -f {} \;'

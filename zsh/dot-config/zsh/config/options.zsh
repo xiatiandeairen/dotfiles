@@ -15,3 +15,7 @@ setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history
 
 # correct
 setopt CORRECT
+
+# case insensitive
+setopt nocaseglob
+setopt glob_dots

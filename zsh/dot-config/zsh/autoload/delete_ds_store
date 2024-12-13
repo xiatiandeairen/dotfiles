@@ -1,0 +1,18 @@
+delete_ds_store() {
+  local target_dir="$1"
+
+  if [ -z "$target_dir" ]; then
+    echo "Usage: delete_invalid_symlink <directory>"
+    return 1
+  fi
+
+  if [ ! -d "$target_dir" ]; then
+    echo "Error: Directory '$target_dir' does not exist."
+    return 1
+  fi
+  
+  # 使用 find 查找并删除指定目录中的 .DS_Store 文件
+  find "$target_dir" -type f -name '.DS_Store' -exec echo "Deleting: {}" \; -exec rm -f {} \;
+  
+  echo "execute finish"
+}

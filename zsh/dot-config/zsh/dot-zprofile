@@ -5,7 +5,7 @@ fpath=(${ZDOTDIR}/autoload ${fpath})
 [ -f ${DOTFILES}/bootstrap.sh ] && source ${DOTFILES}/bootstrap.sh 
 
 # autoload
-autoload -Uz lazyload cacheAsFile cleanInvalidSymlink
+autoload -Uz lazyload cache_file clean_invalid_symlink fzf_search fzf_ripgrep fzf_ripgrep_switch
 
 # brew
 export BREW_CONFIG_PATH="${ZDOTDIR_CACHE}/brew.sh"
@@ -15,29 +15,29 @@ lazyload 'brew' '
     else
         brew_command="$(/usr/local/Homebrew/bin/brew shellenv)"
     fi
-    [ ! -f ${BREW_CONFIG_PATH} ] && cacheAsFile "${brew_command}" "${BREW_CONFIG_PATH}"
+    [ ! -f ${BREW_CONFIG_PATH} ] && cache_file "${brew_command}" "${BREW_CONFIG_PATH}"
     source ${BREW_CONFIG_PATH}
 '
 
 # the fuck
 export FUCK_CONFIG_PATH="${ZDOTDIR_CACHE}/thefuck.sh"
-[ ! -f ${FUCK_CONFIG_PATH} ] && cacheAsFile "$(thefuck --alias)" "${FUCK_CONFIG_PATH}"
+[ ! -f ${FUCK_CONFIG_PATH} ] && cache_file "$(thefuck --alias)" "${FUCK_CONFIG_PATH}"
 source ${FUCK_CONFIG_PATH}
 
 # zoxide
 export ZOXIDE_CONFIG_PATH="${ZDOTDIR_CACHE}/zoxide.sh"
-[ ! -f ${ZOXIDE_CONFIG_PATH} ] && cacheAsFile "$(zoxide init zsh)" "${ZOXIDE_CONFIG_PATH}"
+[ ! -f ${ZOXIDE_CONFIG_PATH} ] && cache_file "$(zoxide init zsh)" "${ZOXIDE_CONFIG_PATH}"
 source ${ZOXIDE_CONFIG_PATH}
 
 # fzf
 export FZF_CONFIG_PATH="${ZDOTDIR_CACHE}/fzf.sh"
-[ ! -f ${FZF_CONFIG_PATH} ] && cacheAsFile "$(fzf --zsh)" "${FZF_CONFIG_PATH}"
+[ ! -f ${FZF_CONFIG_PATH} ] && cache_file "$(fzf --zsh)" "${FZF_CONFIG_PATH}"
 source ${FZF_CONFIG_PATH}
 
 # direnv
 lazyload 'direnv' '
 export DIRENV_CONFIG_PATH="${ZDOTDIR_CACHE}/direnv.sh"
-[ ! -f ${DIRENV_CONFIG_PATH} ] && cacheAsFile "$(direnv hook zsh)" "${DIRENV_CONFIG_PATH}"
+[ ! -f ${DIRENV_CONFIG_PATH} ] && cache_file "$(direnv hook zsh)" "${DIRENV_CONFIG_PATH}"
 source ${DIRENV_CONFIG_PATH}
 '
 

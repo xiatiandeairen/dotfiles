@@ -1,4 +1,4 @@
-function cacheAsFile {
+function cache_file {
     var_name="$1"
     output_file="$2"
 

@@ -52,7 +52,29 @@ export TIGRC_USER="${XDG_CONFIG_HOME}/tig/config/tigrc"
 export TMUX_CONFIG_PATH="${XDG_CONFIG_HOME}/tmux/tmux.conf"
 
 # tldr
-export TLDR_CACHE_DIR=“${XDG_CACHE_HOME}/tldrc”
+export TLDR_CACHE_DIR="${XDG_CACHE_HOME}/tldrc"
+
+#fzf
+local fzf_default_exculde_dir=".git,node_modules,venv,.vscode"
+export FZF_DEFAULT_OPTS="--height=50% --tmux=center,70% --layout=reverse --border --margin=1 --padding=1 \
+--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934"
+export FZF_DEFAULT_COMMAND="${_fd}"
+export FZF_COMPLETION_OPTS='--border --height=50% --margin=1 --padding=1'
+export FZF_COMPLETION_PATH_OPTS='--walker file,dir,follow,hidden --walker-skip '"${fzf_default_exculde_dir}"
+export FZF_COMPLETION_DIR_OPTS='--walker dir,follow,hidden --walker-skip '"${fzf_default_exculde_dir}"
+export FZF_CTRL_T_OPTS=" \
+--header 'Press CTRL-/ or ctrl-t or ctrl-/' \
+--walker-skip ${fzf_default_exculde_dir} \
+--bind 'ctrl-t:transform:[[ ! \$FZF_PROMPT =~ Files ]] && \
+echo \"change-prompt(Files> )+reload(fd --type file --follow --hidden )\" || \
+echo \"change-prompt(Directories> )+reload(fd --type directory --follow --hidden )\"' \
+--preview '[[ \$FZF_PROMPT =~ Files ]] && bat --color=always {} || tree -C {}' \
+--bind 'ctrl-e:become(emacs {})' \
+--bind 'ctrl-/:change-preview-window(down|hidden|)'"
+export FZF_CTRL_R_OPTS=" \
+--bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' \
+--color header:italic \
+--header 'Press CTRL-Y to copy command into clipboard'"
 
 # vim
 export MYVIMDIR="${XDG_CONFIG_HOME}/vim"

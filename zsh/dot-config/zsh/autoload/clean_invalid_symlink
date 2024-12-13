@@ -1,4 +1,4 @@
-cleanInvalidSymlink() {
+clean_invalid_symlink() {
   local target_dir="$1"
 
   if [ -z "$target_dir" ]; then

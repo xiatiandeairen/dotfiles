@@ -10,7 +10,7 @@ fi
 # 加载基础配置
 source ${ZDOTDIR_CONFIG}/options.zsh
 source ${ZDOTDIR_CONFIG}/completion.zsh
-source ${ZDOTDIR_CONFIG}/keybindings.zsh
+source ${ZDOTDIR_CONFIG}/keybinding.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ${ZDOTDIR}/p10k.zsh ]] || source ${ZDOTDIR}/p10k.zsh

@@ -1,5 +1,7 @@
 #! /bin/bash
 
+local project_exist="$1"
+
 # Function to echo out text
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -112,9 +114,14 @@ elif [ -d /usr/local/Homebrew/bin ]; then
 fi
 
 # git
-if [ ! -d ${HOME}/dotfiles ]; then
+print_message "success" "==> Step One: clone project start"
+if $project_exist; then
+    print_message "warning" "no need to clone project finish"
+elif [ ! -d ${HOME}/dotfiles ]; then
     git clone --recurse-submodules git@github.com:xiatiandeairen/dotfiles.git ${HOME}/dotfiles
+    print_message "warning" "clone project success, and store in ${HOME}/dotfiles"
 fi
+print_message "success" "==> Step One: clone project finish"
 
 # install all needed cmd tools
 software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd" "gum" "direnv" "rg")

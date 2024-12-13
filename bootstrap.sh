@@ -6,9 +6,10 @@ function apply {
 function bootstrap {
     targets=(zsh brew bat broot eza tig tmux zoxide vim thefuck nvim direnv kitty)
     for target in "${targets[@]}"; do
-        if [ -f ${DOTFILES}/${target} ]; then
+        if [ -d ${DOTFILES}/${target} ]; then
+            echo "apply ${target} success"
             apply ${target}
-        fi  
+        fi 
     done
 }
 

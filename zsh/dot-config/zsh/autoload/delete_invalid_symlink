@@ -1,12 +1,11 @@
-clean_invalid_symlink() {
+delete_invalid_symlink() {
   local target_dir="$1"
 
   if [ -z "$target_dir" ]; then
-    echo "Usage: clean_broken_symlinks <directory>"
+    echo "Usage: delete_invalid_symlink <directory>"
     return 1
   fi
 
-  # 检查目标目录是否存在
   if [ ! -d "$target_dir" ]; then
     echo "Error: Directory '$target_dir' does not exist."
     return 1
@@ -15,5 +14,5 @@ clean_invalid_symlink() {
   # 查找并删除失效的软链接
   find "$target_dir" -type l ! -exec test -e {} \; -print -exec rm {} \;
 
-  echo "失效的软链接已清除。"
+  echo "execute finish"
 }

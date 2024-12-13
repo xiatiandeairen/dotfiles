@@ -28,6 +28,5 @@ alias g='ack '"${default_ack_opts}"
 alias fzf_vim="fzf --bind 'enter:become(vim {+}),ctrl-e:become(emacs {})'"
 
 # custom
-alias delete-dsstore='find . -name ".DS_Store" -exec rm -f {} \;'
 alias d='dirs -v'
 for index ({1..5}) alias "$index"="cd +${index}"; unset index

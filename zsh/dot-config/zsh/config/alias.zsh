@@ -25,7 +25,6 @@ local default_ack_opts="-i --context=5 --color"
 alias g='ack '"${default_ack_opts}"
 
 # fzf
-local pattern="\${*:-}"
 alias fzf_vim="fzf --bind 'enter:become(vim {+}),ctrl-e:become(emacs {})'"
 
 # custom

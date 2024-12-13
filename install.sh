@@ -117,7 +117,7 @@ if [ ! -d ${HOME}/dotfiles ]; then
 fi
 
 # install all needed cmd tools
-software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd" "gum" "direnv")
+software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd" "gum" "direnv" "rg")
 print_message "success" "==> Step One: install all needed command line tools"
 for software in "${software_list[@]}"; do
     install_if_missing "$software"

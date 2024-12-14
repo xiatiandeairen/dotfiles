@@ -49,7 +49,10 @@ export EZA_CONFIG_DIR="${XDG_CONFIG_HOME}/eza"
 export TIGRC_USER="${XDG_CONFIG_HOME}/tig/config/tigrc"
 
 # tmux
-export TMUX_CONFIG_PATH="${XDG_CONFIG_HOME}/tmux/tmux.conf"
+export TMUX_CONFIG_DIR="${XDG_CONFIG_HOME}/tmux"
+export TMUX_CONFIG_PATH="${TMUX_CONFIG_DIR}/tmux.conf"
+export TMUX_PLUGIN_MANAGER_PATH="${TMUX_CONFIG_DIR}/plugins"
+export TMUX_PLUGIN_MANAGER="${TMUX_PLUGIN_MANAGER_PATH}/tpm"
 
 # tldr
 export TLDR_CACHE_DIR="${XDG_CACHE_HOME}/tldrc"

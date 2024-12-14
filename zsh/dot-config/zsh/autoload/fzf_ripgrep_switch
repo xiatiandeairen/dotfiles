@@ -1,8 +1,6 @@
+# 全局字符串搜索，可以自由切换模糊搜索和精确搜索
 fzf_ripgrep_switch() {
-  # 定义 ripgrep 命令前缀
   RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
-
-  # 获取初始查询参数，如果没有传递则为空字符串
   INITIAL_QUERY="${*:-}"
 
   # 启动 fzf，并配置所有的选项

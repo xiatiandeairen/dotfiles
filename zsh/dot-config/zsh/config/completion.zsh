@@ -42,3 +42,14 @@ zstyle ":completion:*:descriptions" format "%F{green}-- %d --%f"
 zstyle ":completion:*:messages" format " %F{purple} -- %d --%f"
 zstyle ":completion:*:warnings" format " %F{red}-- no matches found --%f"
 zstyle ":completion:*:git-checkout:*" sort false
+
+# Completion for dot command
+_dot() {
+  if [[ $words[1] == "dot" ]]; then
+    compadd pull push commit diff status apply bootstrap cd benchmark
+    return
+  fi
+}
+compdef _dot dot
+
+

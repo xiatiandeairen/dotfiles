@@ -27,6 +27,9 @@ alias g='ack '"${default_ack_opts}"
 # fzf
 alias fzf_vim="fzf --bind 'enter:become(vim {+}),ctrl-e:become(emacs {})'"
 
+# kitty
+alias icat="kitten icat"
+
 # custom
 alias d='dirs -v'
 for index ({1..5}) alias "$index"="cd +${index}"; unset index

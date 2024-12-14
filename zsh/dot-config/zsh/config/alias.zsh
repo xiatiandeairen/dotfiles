@@ -30,6 +30,21 @@ alias fzf_vim="fzf --bind 'enter:become(vim {+}),ctrl-e:become(emacs {})'"
 # kitty
 alias icat="kitten icat"
 
+# git
+alias gst='git status'
+alias gco='git commit'
+alias gad='git add'
+alias gca='git commit --amend'
+alias gsb='git switch'
+alias gcb='git checkout -b'
+alias glg='git log --oneline --decorate --graph'
+alias grb='git rebase'
+alias gmb='git merge'
+alias gdw='git diff'
+alias gdc='git diff --cached'
+alias gpl='git pull --autostash'
+alias gph='git push'
+
 # custom
 alias d='dirs -v'
 for index ({1..5}) alias "$index"="cd +${index}"; unset index

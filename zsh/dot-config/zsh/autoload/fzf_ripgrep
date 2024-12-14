@@ -1,12 +1,11 @@
+# 全局字符串搜索，先精确搜索再模糊搜索
 fzf_ripgrep() {
-  # 定义 ripgrep 命令前缀
-  RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
-  
-  # 获取初始查询参数，如果没有参数则使用空字符串
+  RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "  
   INITIAL_QUERY="${*:-}"
   
   # 使用 fzf 启动交互式搜索
   fzf --ansi --disabled --query "$INITIAL_QUERY" \
+      --header 'Press alt-enter to use fzf' \
       --bind "start:reload:$RG_PREFIX {q}" \
       --bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
       --bind "alt-enter:unbind(change,alt-enter)+change-prompt(2. fzf> )+enable-search+clear-query" \

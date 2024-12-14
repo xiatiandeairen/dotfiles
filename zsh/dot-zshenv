@@ -84,6 +84,11 @@ export MYVIMDIR="${XDG_CONFIG_HOME}/vim"
 export MYVIMRC="${MYVIMDIR}/vimrc" 
 export VIMINIT="source ${MYVIMRC}"
 
+# emacs
+export EMACSDIR="${XDG_CONFIG_HOME}/emacs"
+export EMACSINIT="${EMACSDIR}/init.el"
+
+
 # PATH
 [ -f ${ZDOTDIR}/path.zsh ] && source ${ZDOTDIR}/path.zsh
 

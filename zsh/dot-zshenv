@@ -60,7 +60,7 @@ export TLDR_CACHE_DIR="${XDG_CACHE_HOME}/tldrc"
 #fzf
 local fzf_default_exculde_dir=".git,node_modules,venv,.vscode"
 export FZF_DEFAULT_OPTS="--height=50% --tmux=center,70% --layout=reverse --border --margin=1 --padding=1 \
---color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934"
+--color=bg+:#D9D9D9,bg:#E1E1E1,border:#C8C8C8,spinner:#719899,hl:#719872,fg:#616161,header:#719872,info:#727100,pointer:#E12672,marker:#E17899,fg+:#616161,preview-bg:#D9D9D9,prompt:#0099BD,hl+:#719899"
 export FZF_DEFAULT_COMMAND="${_fd}"
 export FZF_COMPLETION_OPTS='--border --height=50% --margin=1 --padding=1'
 export FZF_COMPLETION_PATH_OPTS='--walker file,dir,follow,hidden --walker-skip '"${fzf_default_exculde_dir}"
@@ -80,8 +80,14 @@ export FZF_CTRL_R_OPTS=" \
 --header 'Press CTRL-Y to copy command into clipboard'"
 
 # vim
-export MYVIMDIR="${XDG_CONFIG_HOME}/vim"
-export MYVIMRC="${MYVIMDIR}/vimrc" 
+enable_nvim=false
+if $enable_nvim; then
+    export MYVIMDIR="${XDG_CONFIG_HOME}/nvim"
+    export MYVIMRC="${MYVIMDIR}/init.lua"
+else 
+    export MYVIMDIR="${XDG_CONFIG_HOME}/vim"
+    export MYVIMRC="${MYVIMDIR}/init.vim"
+fi
 export VIMINIT="source ${MYVIMRC}"
 
 # emacs

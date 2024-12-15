@@ -7,9 +7,6 @@
 [submodule "zsh/dot-config/zsh/plugins/zaw"]
 	path = zsh/dot-config/zsh/plugins/zaw
 	url = https://github.com/zsh-users/zaw.git
-[submodule "tmux/dot-config/tmux/plugins/tmux-yank"]
-	path = tmux/dot-config/tmux/plugins/tmux-yank
-	url = https://github.com/tmux-plugins/tmux-yank.git
 [submodule "tmux/dot-config/tmux/plugins/tmux-fzf"]
 	path = tmux/dot-config/tmux/plugins/tmux-fzf
 	url = https://github.com/sainnhe/tmux-fzf.git

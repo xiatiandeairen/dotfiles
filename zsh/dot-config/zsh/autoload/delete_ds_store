@@ -2,7 +2,7 @@ delete_ds_store() {
   local target_dir="$1"
 
   if [ -z "$target_dir" ]; then
-    echo "Usage: delete_invalid_symlink <directory>"
+    echo "Usage: delete_ds_store <directory>"
     return 1
   fi
 

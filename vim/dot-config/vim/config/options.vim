@@ -26,7 +26,6 @@ set wrap
 " 开启行尾高亮
 set cursorline
 set ruler
-set cursorline
 
 " 启用命令行自动补全
 set wildmenu
@@ -52,16 +51,3 @@ set backupdir=$MYVIMDIR/backup//
 " 设置交换文件的保存路径
 set swapfile
 set directory=$MYVIMDIR/swap//
-
-" 自动保存文件
-au InsertLeave * silent! write
-
-" 设置 Python 文件的缩进
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
-
-" 设置 JavaScript 文件的缩进
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
-
-" 设置 HTML 文件的缩进
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
-

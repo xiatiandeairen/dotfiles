@@ -45,6 +45,15 @@ alias gdc='git diff --cached'
 alias gpl='git pull --autostash'
 alias gph='git push'
 
+# vim
+alias vimrc="vim ${MYVIMRC}"
+alias vimdir="vim ${MYVIMDIR}"
+
+# zsh
+alias zshenv="vim ${HOME}/.zshenv"
+alias zshpath="vim ${ZDOTDIR}/path.zsh"
+alias zshrc="vim ${ZDOTDIR}/.zshrc"
+
 # custom
 alias d='dirs -v'
 for index ({1..5}) alias "$index"="cd +${index}"; unset index

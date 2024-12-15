@@ -4,13 +4,13 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 
 # editor
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="vim"
+export VISUAL="vim"
 export LANG="en_US.UTF-8"
 export KEYTIMEOUT=1
 
 # Man pages
-export MANPAGER='nvim +Man!'
+export MANPAGER='vim +Man!'
 
 # Dotfiles Home
 export DOTFILES="${HOME}/dotfiles"
@@ -80,11 +80,13 @@ export FZF_CTRL_R_OPTS=" \
 --header 'Press CTRL-Y to copy command into clipboard'"
 
 # vim
-enable_nvim=false
+enable_nvim=true
 if $enable_nvim; then
+    alias vim="nvim"
     export MYVIMDIR="${XDG_CONFIG_HOME}/nvim"
     export MYVIMRC="${MYVIMDIR}/init.lua"
 else 
+    alias nvim="vim"
     export MYVIMDIR="${XDG_CONFIG_HOME}/vim"
     export MYVIMRC="${MYVIMDIR}/init.vim"
 fi

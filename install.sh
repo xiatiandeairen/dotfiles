@@ -124,7 +124,7 @@ fi
 print_message "success" "==> Step One: clone project finish"
 
 # install all needed cmd tools
-software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd" "gum" "direnv" "rg" "ripgrep the_silver_searcher")
+software_list=("zsh" "stow" "git" "tig" "curl" "wget" "vim" "nvim" "emacs" "fzf" "bat" "eza" "tldr" "broot" "thefuck" "tmux" "htop" "zoxide" "w3m" "s-search" "jq" "ack" "fd" "gum" "direnv" "rg" "ripgrep" "the_silver_searcher" "perl")
 print_message "success" "==> Step One: install all needed command line tools"
 for software in "${software_list[@]}"; do
     install_if_missing "$software"

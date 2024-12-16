@@ -1,4 +1,6 @@
-require('config.options')
+require("config.options")
 require("config.keymaps")
 require("config.autocmds")
 require("config.lazy")
+
+require("plugins.telescope")

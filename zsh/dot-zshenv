@@ -4,13 +4,13 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 
 # editor
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export LANG="en_US.UTF-8"
 export KEYTIMEOUT=1
 
 # Man pages
-export MANPAGER='vim +Man!'
+export MANPAGER='nvim +Man!'
 
 # Dotfiles Home
 export DOTFILES="${HOME}/dotfiles"

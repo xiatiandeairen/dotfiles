@@ -141,7 +141,7 @@ print_message "success" "==> Step Two: backup success"
 
 # stow config
 print_message "success" "==> Step Three: stow new config"
-export DOTFILES=$(get_script_dir)
+export DOTFILES="${HOME}/dotfiles"
 source $(get_script_dir)/bootstrap.sh
 bootstrap
 print_message "success" "==> Step Three: stow success"

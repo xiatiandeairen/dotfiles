@@ -24,7 +24,7 @@
 ## Installation 
 
 ```shell
-curl -sSL https://github.com/xiatiandeairen/dotfiles/blob/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/xiatiandeairen/dotfiles/main/install.sh | bash
 ```
 
 ### Usage

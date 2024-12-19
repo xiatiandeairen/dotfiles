@@ -9,12 +9,8 @@ RED='\033[0;31m'
 BLUE='\033[0;34m'
 NC='\033[0m' 
 
-get_script_dir() {
-    # Get the directory path of the current script
-    local script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-    echo "$script_path"
-}
-CACHE_DIR=$(get_script_dir)/.backup 
+export DOTFILES="${HOME}/dotfiles"
+CACHE_DIR=$(DOTFILES)/.backup 
 
 print_message() {
     local type=$1
@@ -118,7 +114,7 @@ print_message "success" "==> Step One: clone project start"
 if $project_exist; then
     print_message "warning" "no need to clone project finish"
 elif [ ! -d ${HOME}/dotfiles ]; then
-    git clone --recurse-submodules git@github.com:xiatiandeairen/dotfiles.git ${HOME}/dotfiles
+    git clone --recurse-submodules git@github.com:xiatiandeairen/dotfiles.git ${DOTFILES}
     print_message "warning" "clone project success, and store in ${HOME}/dotfiles"
 fi
 print_message "success" "==> Step One: clone project finish"
@@ -141,7 +137,6 @@ print_message "success" "==> Step Two: backup success"
 
 # stow config
 print_message "success" "==> Step Three: stow new config"
-export DOTFILES="${HOME}/dotfiles"
-source $(get_script_dir)/bootstrap.sh
+source $(DOTFILES)/bootstrap.sh
 bootstrap
 print_message "success" "==> Step Three: stow success"

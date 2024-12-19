@@ -10,7 +10,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' 
 
 export DOTFILES="${HOME}/dotfiles"
-CACHE_DIR=$(DOTFILES)/.backup 
+CACHE_DIR=${DOTFILES}/.backup 
 
 print_message() {
     local type=$1
@@ -113,7 +113,7 @@ fi
 print_message "success" "==> Step One: clone project start"
 if $project_exist; then
     print_message "warning" "no need to clone project finish"
-elif [ ! -d ${HOME}/dotfiles ]; then
+elif [ ! -d ${DOTFILES} ]; then
     git clone --recurse-submodules git@github.com:xiatiandeairen/dotfiles.git ${DOTFILES}
     print_message "warning" "clone project success, and store in ${HOME}/dotfiles"
 fi
@@ -137,6 +137,6 @@ print_message "success" "==> Step Two: backup success"
 
 # stow config
 print_message "success" "==> Step Three: stow new config"
-source $(DOTFILES)/bootstrap.sh
+source ${DOTFILES}/bootstrap.sh
 bootstrap
 print_message "success" "==> Step Three: stow success"

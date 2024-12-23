@@ -15,4 +15,5 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'wellle/targets.vim'
 Plug 'dense-analysis/ale'
+Plugin 'christoomey/vim-tmux-navigator'
 call plug#end()

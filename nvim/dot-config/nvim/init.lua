@@ -1,6 +1,6 @@
-vim.cmd('source ./config/keymaps.vim')
-vim.cmd('source ./config/options.vim')
-vim.cmd('source ./config/autocmds.vim')
+vim.cmd("source " .. vim.fn.getenv("MYVIMDIR") .. "/config/keymaps.vim")
+vim.cmd("source " .. vim.fn.getenv("MYVIMDIR") .. "/config/options.vim")
+vim.cmd("source " .. vim.fn.getenv("MYVIMDIR") .. "/config/autocmds.vim")
 
 -- require("config.options")
 -- require("config.keymaps")

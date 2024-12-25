@@ -38,7 +38,7 @@ set ignorecase
 set smartcase
 
 " 延迟屏幕更新,提高执行效率
-set lazyredraw
+" set lazyredraw
 
 " 设置状态行的颜色
 set laststatus=2

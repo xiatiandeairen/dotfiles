@@ -43,7 +43,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- 延迟屏幕更新提高效率
-vim.opt.lazyredraw = true
+-- vim.opt.lazyredraw = true
 
 -- 设置状态栏
 vim.opt.laststatus = 2

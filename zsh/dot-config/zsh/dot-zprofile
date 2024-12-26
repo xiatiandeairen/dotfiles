@@ -5,7 +5,7 @@ fpath=(${ZDOTDIR}/autoload ${fpath})
 [ -f ${DOTFILES}/bootstrap.sh ] && source ${DOTFILES}/bootstrap.sh 
 
 # autoload
-autoload -Uz lazyload cache_file delete_invalid_symlink fzf_search fzf_ripgrep fzf_ripgrep_switch bd delete_ds_store git_search_commits fzf_cd fzf_tmux
+autoload -Uz lazyload cache_file delete_invalid_symlink fzf_search fzf_ripgrep fzf_ripgrep_switch bd delete_ds_store git_search_commits fzf_cd fzf_tmux delete_file_from_git_history
 
 # brew
 export BREW_CONFIG_PATH="${ZDOTDIR_CACHE}/brew.sh"

@@ -52,3 +52,7 @@ bindkey -M visual S add-surround
 
 # open tmux
 bindkey -s '^b' '^Qtmux attach-session -t "$(tmux ls 2>/dev/null | tail -n 1 | cut -d: -f1)"^M'
+
+# zaw
+bindkey -M vicmd '^P' zaw
+bindkey '^E' zaw-tmux

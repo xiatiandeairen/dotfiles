@@ -19,3 +19,27 @@ setopt CORRECT
 # case insensitive
 setopt nocaseglob
 setopt glob_dots
+
+# completion
+zstyle ":completion:*" menu no
+zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
+zstyle ":completion:*" group-name ""
+zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS}
+zstyle ":completion:*:descriptions" format "%F{green}-- %d --%f"
+zstyle ":completion:*:messages" format " %F{purple} -- %d --%f"
+zstyle ":completion:*:warnings" format " %F{red}-- no matches found --%f"
+zstyle ":completion:*:git-checkout:*" sort false
+
+# zaw
+zstyle ':filter-select:highlight' matched fg=blue,standout
+zstyle ':filter-select:highlight' selected fg=green,standout
+zstyle ':filter-select:highlight' error fg=red,standout
+zstyle ':filter-select' max-lines 10 # use 10 lines for filter-select
+zstyle ':filter-select' max-lines -10 # use $LINES - 10 for filter-select
+zstyle ':filter-select' rotate-list no # enable rotation for filter-select
+zstyle ':filter-select' case-insensitive yes # enable case-insensitive search
+zstyle ':filter-select' extended-search yes # see below
+zstyle ':filter-select' hist-find-no-dups yes # ignore duplicates in history source
+zstyle ':filter-select' escape-descriptions no # display literal newlines, not \n, etc
+zstyle ':zaw:git-files' default zaw-callback-append-to-buffer # set default action for git-files
+zstyle ':zaw:git-files' alt zaw-callback-edit-file # set the alt action for git-files

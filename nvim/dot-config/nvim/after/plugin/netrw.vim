@@ -1,0 +1,1 @@
+../../../../../vim/dot-config/vim/after/plugin/netrw.vim

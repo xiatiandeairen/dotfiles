@@ -1,5 +1,5 @@
 # Git filter-branch to remove file/folder from history
-delete_file_from_git_history() {
+git_delete_file_from_history() {
   if [ -z "$1" ]; then
     echo "Usage: git_remove_file_from_history <file-or-folder-path>"
     return 1

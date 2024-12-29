@@ -287,45 +287,40 @@ _fzf_git_worktrees() {
   awk '{print $1}'
 }
 
-if [[ -n "${BASH_VERSION:-}" ]]; then
-  __fzf_git_init() {
-    bind -m emacs-standard '"\er":  redraw-current-line'
-    bind -m emacs-standard '"\C-z": vi-editing-mode'
-    bind -m vi-command     '"\C-z": emacs-editing-mode'
-    bind -m vi-insert      '"\C-z": emacs-editing-mode'
+__fzf_git_join() {
+  local item
+  while read item; do
+    echo -n "${(q)item} "
+  done
+}
 
-    local o c
-    for o in "$@"; do
-      c=${o:0:1}
-      bind -m emacs-standard '"\C-g\C-'$c'": " \C-u \C-a\C-k`_fzf_git_'$o'`\e\C-e\C-y\C-a\C-y\ey\C-h\C-e\er \C-h"'
-      bind -m vi-command     '"\C-g\C-'$c'": "\C-z\C-g\C-'$c'\C-z"'
-      bind -m vi-insert      '"\C-g\C-'$c'": "\C-z\C-g\C-'$c'\C-z"'
-      bind -m emacs-standard '"\C-g'$c'":    " \C-u \C-a\C-k`_fzf_git_'$o'`\e\C-e\C-y\C-a\C-y\ey\C-h\C-e\er \C-h"'
-      bind -m vi-command     '"\C-g'$c'":    "\C-z\C-g'$c'\C-z"'
-      bind -m vi-insert      '"\C-g'$c'":    "\C-z\C-g'$c'\C-z"'
-    done
-  }
-elif [[ -n "${ZSH_VERSION:-}" ]]; then
-  __fzf_git_join() {
-    local item
-    while read item; do
-      echo -n "${(q)item} "
-    done
-  }
-
-  __fzf_git_init() {
-    local m o
-    for o in "$@"; do
-      eval "fzf-git-$o-widget() { local result=\$(_fzf_git_$o | __fzf_git_join); zle reset-prompt; LBUFFER+=\$result }"
-      eval "zle -N fzf-git-$o-widget"
-      for m in emacs vicmd viins; do
-        eval "bindkey -M $m '^x^${o[1]}' fzf-git-$o-widget"
-        eval "bindkey -M $m '^x${o[1]}' fzf-git-$o-widget"
-      done
-    done
-  }
-fi
-__fzf_git_init files branches tags remotes hashes stashes lreflogs each_ref worktrees
+fzf-git-files-widget() { local result=$(_fzf_git_files | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-files-widget
+bindkey '^xf' fzf-git-files-widget
+fzf-git-branches-widget() { local result=$(_fzf_git_branches | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-branches-widget
+bindkey '^xb' fzf-git-branches-widget
+fzf-git-tags-widget() { local result=$(_fzf_git_tags | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-tags-widget
+bindkey '^xt' fzf-git-tags-widget
+fzf-git-remotes-widget() { local result=$(_fzf_git_remotes | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-remotes-widget
+bindkey '^xr' fzf-git-remotes-widget
+fzf-git-hashes-widget() { local result=$(_fzf_git_hashes | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-hashes-widget
+bindkey '^xh' fzf-git-hashes-widget
+fzf-git-stashes-widget() { local result=$(_fzf_git_stashes | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-stashes-widget
+bindkey '^xs' fzf-git-stashes-widget
+fzf-git-lreflogs-widget() { local result=$(_fzf_git_lreflogs | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-lreflogs-widget
+bindkey '^xl' fzf-git-lreflogs-widget
+fzf-git-each_ref-widget() { local result=$(_fzf_git_each_ref | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-each_ref-widget
+bindkey '^xe' fzf-git-each_ref-widget
+fzf-git-worktrees-widget() { local result=$(_fzf_git_worktrees | __fzf_git_join); zle reset-prompt; LBUFFER+=$result }
+zle -N fzf-git-worktrees-widget
+bindkey '^xw' fzf-git-worktrees-widget
 
 # -----------------------------------------------------------------------------
 fi

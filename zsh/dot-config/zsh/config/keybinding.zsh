@@ -52,7 +52,10 @@ bindkey -M visual S add-surround
 
 # open tmux
 bindkey -s '^b' '^Qtmux attach-session -t "$(tmux ls 2>/dev/null | tail -n 1 | cut -d: -f1)"^M'
+bindkey -s '^E' '^Qselected_session=$(echo "$(tmux list-sessions -F "#{session_name}" 2>/dev/null)" | fzf --prompt "Select a tmux session or Press Enter to create new:" --preview "echo {}") && tmux attach-session -t "$selected_session" || tmux^M'
 
 # zaw
-bindkey -M vicmd '^P' zaw
-bindkey '^E' zaw-tmux
+lazybind '^P' \
+  '[ -f ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh ] && source ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh' \
+  'zaw' \
+  'zaw'

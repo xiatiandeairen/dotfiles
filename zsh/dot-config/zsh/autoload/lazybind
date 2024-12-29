@@ -1,0 +1,35 @@
+# lazybind, eg. lazybind '^P' \
+# '[ -f ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh ] && source ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh' \
+# 'zaw' \
+# 'zaw' \
+# vicmd
+lazybind() {
+  local key="$1"    # 绑定快捷键：例如 '^P'
+  local init_code="$2" # 第一次触发时的初始化代码
+  local action="$3"    # 初始化后执行的功能逻辑
+  local widget="$4" # widget
+  local keymap="$5" # 键盘模式：例如 'vicmd'
+  
+  local wrapped_function="_lazy_$key"
+  
+  eval "
+    $wrapped_function() {
+        unbindkey -M $keymap $key # 解除当前快捷键绑定
+        eval \"$init_code\"       # 执行初始化代码
+        eval \"$action\"          # 第一次按下时执行逻辑
+        if [ $keymap ]; then
+            bindkey -M $keymap $key \"$widget\" # 重新绑定快捷键到功能逻辑
+        else
+            bindkey $key \"$widget\" # 重新绑定快捷键到功能逻辑
+        fi
+    }
+  "
+
+  zle -N $wrapped_function
+
+  if [ $keymap ]; then
+    bindkey -M $keymap $key $wrapped_function # 绑定到中间函数
+  else
+    bindkey $key $wrapped_function # 绑定到中间函数
+  fi
+}

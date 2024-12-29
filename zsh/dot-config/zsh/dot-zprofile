@@ -10,7 +10,7 @@ fpath=(${ZDOTDIR}/autoload ${fpath})
 [ -f ${ZDOTDIR_SCRIPTS}/tmux.zsh ] && source ${ZDOTDIR_SCRIPTS}/tmux.zsh
 
 # autoload
-autoload -Uz lazyload cache_file delete_invalid_symlink bd delete_ds_store 
+autoload -Uz surround lazyload lazybind cache_file delete_invalid_symlink bd delete_ds_store
 
 # brew
 export BREW_CONFIG_PATH="${ZDOTDIR_CACHE}/brew.sh"
@@ -45,9 +45,6 @@ export DIRENV_CONFIG_PATH="${ZDOTDIR_CACHE}/direnv.sh"
 [ ! -f ${DIRENV_CONFIG_PATH} ] && cache_file "$(direnv hook zsh)" "${DIRENV_CONFIG_PATH}"
 source ${DIRENV_CONFIG_PATH}
 '
-
-# zaw
-[ -f ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh ] && source ${ZDOTDIR_PLUGINS}/zaw/zaw.zsh
 
 # nvm
 lazyload 'nvm' '

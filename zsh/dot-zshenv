@@ -31,6 +31,23 @@ export SAVEHIST=10000   # Maximum events in history file
 # stow
 export STOW_DIR=${DOTFILES}
 
+# vim
+enable_nvim=true
+if $enable_nvim; then
+    alias vim="nvim"
+    export MYVIMDIR="${XDG_CONFIG_HOME}/nvim"
+    export MYVIMRC="${MYVIMDIR}/init.lua"
+else 
+    alias nvim="vim"
+    export MYVIMDIR="${XDG_CONFIG_HOME}/vim"
+    export MYVIMRC="${MYVIMDIR}/init.vim"
+fi
+export VIMINIT="source ${MYVIMRC}"
+
+# emacs
+export EMACSDIR="${XDG_CONFIG_HOME}/emacs"
+export EMACSINIT="${EMACSDIR}/init.el"
+
 # zoxide
 export _ZO_DATA_DIR="${XDG_DATA_HOME}/zoxide"
 export _ZO_ECHO=1
@@ -66,7 +83,7 @@ export FZF_COMPLETION_OPTS='--border --height=50% --margin=1 --padding=1'
 export FZF_COMPLETION_PATH_OPTS='--walker file,dir,follow,hidden --walker-skip '"${fzf_default_exculde_dir}"
 export FZF_COMPLETION_DIR_OPTS='--walker dir,follow,hidden --walker-skip '"${fzf_default_exculde_dir}"
 export FZF_CTRL_T_OPTS=" \
---header 'Press CTRL-/ or ctrl-t or ctrl-/' \
+--header 'Press CTRL-/ or ctrl-t' \
 --walker-skip ${fzf_default_exculde_dir} \
 --bind 'ctrl-t:transform:[[ ! \$FZF_PROMPT =~ Files ]] && \
 echo \"change-prompt(Files> )+reload(fd --type file --follow --hidden )\" || \
@@ -78,23 +95,6 @@ export FZF_CTRL_R_OPTS=" \
 --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' \
 --color header:italic \
 --header 'Press CTRL-Y to copy command into clipboard'"
-
-# vim
-enable_nvim=true
-if $enable_nvim; then
-    alias vim="nvim"
-    export MYVIMDIR="${XDG_CONFIG_HOME}/nvim"
-    export MYVIMRC="${MYVIMDIR}/init.lua"
-else 
-    alias nvim="vim"
-    export MYVIMDIR="${XDG_CONFIG_HOME}/vim"
-    export MYVIMRC="${MYVIMDIR}/init.vim"
-fi
-export VIMINIT="source ${MYVIMRC}"
-
-# emacs
-export EMACSDIR="${XDG_CONFIG_HOME}/emacs"
-export EMACSINIT="${EMACSDIR}/init.el"
 
 # PATH
 [ -f ${ZDOTDIR}/path.zsh ] && source ${ZDOTDIR}/path.zsh

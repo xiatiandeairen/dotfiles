@@ -40,11 +40,9 @@ export FZF_CONFIG_PATH="${ZDOTDIR_CACHE}/fzf.sh"
 source ${FZF_CONFIG_PATH}
 
 # direnv
-lazyload 'direnv' '
 export DIRENV_CONFIG_PATH="${ZDOTDIR_CACHE}/direnv.sh"
 [ ! -f ${DIRENV_CONFIG_PATH} ] && cache_file "$(direnv hook zsh)" "${DIRENV_CONFIG_PATH}"
 source ${DIRENV_CONFIG_PATH}
-'
 
 # nvm
 lazyload 'nvm' '

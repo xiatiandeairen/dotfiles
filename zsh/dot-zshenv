@@ -85,12 +85,13 @@ export FZF_COMPLETION_DIR_OPTS='--walker dir,follow,hidden --walker-skip '"${fzf
 export FZF_CTRL_T_OPTS=" \
 --header 'Press CTRL-/ or ctrl-t' \
 --walker-skip ${fzf_default_exculde_dir} \
---bind 'ctrl-t:transform:[[ ! \$FZF_PROMPT =~ Files ]] && \
+--select-1 --exit-0 \
+--preview '[[ \$FZF_PROMPT =~ Files ]] && bat --color=always {} || tree -C {}' \
+--bind 'enter:become(nvim {} < /dev/tty > /dev/tty 2>&1),ctrl-e:become(emacs {}),ctrl-/:change-preview-window(down|hidden|),ctrl-t:transform:[[ ! \$FZF_PROMPT =~ Files ]] && \
 echo \"change-prompt(Files> )+reload(fd --type file --follow --hidden )\" || \
 echo \"change-prompt(Directories> )+reload(fd --type directory --follow --hidden )\"' \
---preview '[[ \$FZF_PROMPT =~ Files ]] && bat --color=always {} || tree -C {}' \
---bind 'ctrl-e:become(emacs {})' \
---bind 'ctrl-/:change-preview-window(down|hidden|)'"
+--bind 'f1:execute(less -f {}),ctrl-y:execute-silent(echo {} | pbcopy)+abort' \
+"
 export FZF_CTRL_R_OPTS=" \
 --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' \
 --color header:italic \

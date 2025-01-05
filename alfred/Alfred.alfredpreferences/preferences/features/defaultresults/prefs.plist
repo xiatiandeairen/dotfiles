@@ -16,5 +16,7 @@
 	<true/>
 	<key>showFolders</key>
 	<true/>
+	<key>showImages</key>
+	<true/>
 </dict>
 </plist>

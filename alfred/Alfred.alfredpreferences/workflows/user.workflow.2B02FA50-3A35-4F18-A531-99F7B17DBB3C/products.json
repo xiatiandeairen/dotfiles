@@ -2,7 +2,7 @@
     "androidstudio": {
         "display_name": "Android Studio",
         "folder_name": "AndroidStudio",
-        "preferences_path": "~/Library/Application Support/Google/",
+        "preferences_path": "~/Library/ApplicationSupport/Google/",
         "bundle_id": "com.google.android.studio",
         "uid": "92b0f147-c697-4f0b-b10a-10d823534408"
     },

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>9296F3DC-D856-47F6-AD8E-FFCBE6232EF5</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gg</string>
+			<key>text</key>
+			<string>search geogle for '{query}'</string>
+			<key>url</key>
+			<string>https://www.google.com/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>onlyShowEnabledInPrefs</key>
+	<true/>
+</dict>
+</plist>

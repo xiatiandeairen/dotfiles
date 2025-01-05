@@ -84,7 +84,7 @@ fzf_ripgrep() {
 }
 
 # c - browse chrome history
-fc() {
+c() {
   local cols sep google_history open
   cols=$(( COLUMNS / 3 ))
   sep='{::}'
@@ -105,7 +105,7 @@ fc() {
 }
 
 # b - browse chrome bookmarks
-fb() {
+b() {
      bookmarks_path=~/Library/Application\ Support/Google/Chrome/Default/Bookmarks
 
      jq_script='

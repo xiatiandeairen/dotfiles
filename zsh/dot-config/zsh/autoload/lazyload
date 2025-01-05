@@ -1,18 +1,24 @@
 # lazyload, eg. lazyload 'nvm' 'source ~/.nvm/nvm.sh'
-function lazyload {
-  local cmd="$1"
-  local load_cmd="$2"
-  
-  if type -v "$cmd" &>/dev/null; then
-    return 0
+function lazyload {  
+  local seperator='--'
+  local seperator_index=${@[(ie)$seperator]}
+  local cmd_list=(${@:1:(($seperator_index - 1))}); 
+  local load_cmd=${@[(($seperator_index + 1))]};   
+   
+  if [[ ! $load_cmd ]]; then
+    >&2 echo "[ERROR] lazyload: No load command defined"
+    >&2 echo "  $@"
+    return 1
   fi
-
-  eval "
-    function $cmd {
-      if ! type '$cmd' &>/dev/null; then
-        eval \"$load_cmd\"
-      fi
-      $cmd \"\$@\"
-    }
-  "
+  
+  # check if lazyload was called by placeholder function
+  if (( ${cmd_list[(Ie)${funcstack[2]}]} )); then
+    unfunction $cmd_list
+    eval "$load_cmd"
+  else
+    # create placeholder function for each command
+    local cmd
+    for cmd in $cmd_list; eval "function $cmd { lazyload $cmd_list $seperator ${(qqqq)load_cmd} && $cmd \"\$@\" }"
+  fi
 }
+

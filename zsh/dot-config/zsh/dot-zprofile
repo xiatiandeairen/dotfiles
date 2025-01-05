@@ -14,7 +14,7 @@ autoload -Uz surround lazyload lazybind cache_file delete_invalid_symlink bd del
 
 # brew
 export BREW_CONFIG_PATH="${ZDOTDIR_CACHE}/brew.sh"
-lazyload 'brew' '
+lazyload brew -- '
     if [[ $(uname -m) == "arm64" ]]; then
         brew_command="$(/opt/homebrew/bin/brew shellenv)"
     else
@@ -45,7 +45,7 @@ export DIRENV_CONFIG_PATH="${ZDOTDIR_CACHE}/direnv.sh"
 source ${DIRENV_CONFIG_PATH}
 
 # nvm
-lazyload 'nvm' '
+lazyload nvm -- '
     [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 ' 

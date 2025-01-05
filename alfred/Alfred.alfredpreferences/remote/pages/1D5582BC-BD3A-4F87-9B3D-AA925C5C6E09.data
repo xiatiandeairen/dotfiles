@@ -2,27 +2,84 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>gridsize</key>
+	<integer>4</integer>
+	<key>hidelabels</key>
+	<false/>
 	<key>iconid</key>
 	<string>C35B9B7C-F59D-4819-B2B2-7D34C5E8ADEE</string>
 	<key>iconisuserspecified</key>
 	<true/>
 	<key>items</key>
 	<array>
+		<dict/>
 		<dict>
 			<key>actionconfig</key>
 			<dict>
-				<key>path</key>
-				<string>/Applications/Safari.app</string>
+				<key>searcher</key>
+				<integer>1635215215</integer>
 			</dict>
 			<key>actionuid</key>
-			<string>remote.alfred.launchfile</string>
+			<string>remote.alfred.defaultwebsearch</string>
 			<key>buttoniconid</key>
-			<string>2ABE8C8D-6A68-4F04-A6BF-5547E021B352</string>
+			<string>B336713A-DD75-41F5-A075-F040071175E6</string>
 			<key>buttonlabel</key>
-			<string>Safari浏览器</string>
+			<string>Google</string>
 			<key>itemuid</key>
-			<string>104A8780-C9AB-4072-94C1-E37DD8700464</string>
+			<string>1404BFF1-F29B-4F03-98C2-AEEADD73DA54</string>
 		</dict>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+	</array>
+	<key>itemsall</key>
+	<array>
+		<dict/>
+		<dict>
+			<key>actionconfig</key>
+			<dict>
+				<key>searcher</key>
+				<integer>1635215215</integer>
+			</dict>
+			<key>actionuid</key>
+			<string>remote.alfred.defaultwebsearch</string>
+			<key>buttoniconid</key>
+			<string>B336713A-DD75-41F5-A075-F040071175E6</string>
+			<key>buttonlabel</key>
+			<string>Google</string>
+			<key>itemuid</key>
+			<string>1404BFF1-F29B-4F03-98C2-AEEADD73DA54</string>
+		</dict>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
+		<dict/>
 		<dict/>
 		<dict/>
 		<dict/>

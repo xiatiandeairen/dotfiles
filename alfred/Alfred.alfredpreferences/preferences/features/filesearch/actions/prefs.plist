@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>disabledDefaultActions</key>
+	<dict>
+		<key>alfred.action.mixed.email</key>
+		<true/>
+		<key>alfred.action.mixed.emailto</key>
+		<true/>
+		<key>alfred.action.recent</key>
+		<true/>
+		<key>alfred.action.showpackagecontents</key>
+		<true/>
+		<key>alfred.action.text.openindictionary</key>
+		<true/>
+		<key>alfred.action.url.usedomainfromurl</key>
+		<true/>
+	</dict>
+	<key>escapeCopiedPath</key>
+	<true/>
+	<key>finderSelectionHotkey</key>
+	<dict>
+		<key>key</key>
+		<integer>-1</integer>
+		<key>mod</key>
+		<integer>262144</integer>
+		<key>string</key>
+		<string>double tap</string>
+	</dict>
+	<key>showWithCtrl</key>
+	<false/>
+	<key>showWithRightArrow</key>
+	<false/>
+	<key>sortByUsage</key>
+	<true/>
+</dict>
+</plist>

@@ -54,7 +54,7 @@ under the License.
   -->
 
 
-  <localRepository>~/repository</localRepository>
+  <localRepository>~/repository/maven</localRepository>
 
 
 

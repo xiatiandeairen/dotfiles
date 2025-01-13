@@ -105,6 +105,9 @@ export GRADLE_USER_HOME="${XDG_CONFIG_HOME}/gradle"
 export GRADLE_POM_REPOSITORY="${HOME}/repository/gradle"
 export GRADLE_PROPERTIES_FILE="${XDG_CONFIG_HOME}/gradle.properties"
 
+# password
+export PASSWORD_STORE_DIR="${XDG_CONFIG_HOME}/password-store"
+
 # PATH
 [ -f ${ZDOTDIR}/path.zsh ] && source ${ZDOTDIR}/path.zsh
 

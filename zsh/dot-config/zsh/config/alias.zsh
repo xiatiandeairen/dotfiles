@@ -53,6 +53,9 @@ alias zshenv="vim ${HOME}/.zshenv"
 alias zshpath="vim ${ZDOTDIR}/path.zsh"
 alias zshrc="vim ${ZDOTDIR}/.zshrc"
 
+# aria2
+alias aria2c="aria2c --conf-path=${DOTFILES}/aria2/aria2.conf"
+
 # custom
 alias d='dirs -v'
 for index ({1..5}) alias "$index"="cd +${index}"; unset index

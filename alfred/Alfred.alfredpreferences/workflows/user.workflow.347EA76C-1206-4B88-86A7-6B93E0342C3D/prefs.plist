@@ -3,6 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>subreddits</key>
-	<string>r/neovim</string>
+	<string>r/neovim
+r/opensource
+</string>
 </dict>
 </plist>

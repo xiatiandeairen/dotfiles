@@ -31,11 +31,12 @@ alias icat="kitten icat"
 
 # git
 alias gst='git status'
+alias gbr='git branch'
 alias gco='git commit'
 alias gad='git add'
 alias gca='git commit --amend'
 alias gsb='git switch'
-alias gcb='git checkout -b'
+alias gcb='git checkout -b -t'
 alias glg='git log --oneline --decorate --graph'
 alias grb='git rebase'
 alias gmb='git merge'
@@ -43,6 +44,16 @@ alias gdw='git diff'
 alias gdc='git diff --cached'
 alias gpl='git pull --autostash'
 alias gph='git push'
+alias gbs='git bisect'
+alias gbsb='git bisect bad'
+alias gbsg='git bisect good'
+alias gbsn='git bisect new'
+alias gbso='git bisect old'
+alias gbsr='git bisect reset'
+alias gbss='git bisect start'
+alias gbsl='git bisect log'
+alias gbsv='git bisect view'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message "--wip-- [skip ci]"'
 
 # vim
 alias vimrc="vim ${MYVIMRC}"

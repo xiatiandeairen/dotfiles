@@ -5,6 +5,7 @@ zsh/dot-config/zsh/cache/
 vim/dot-config/vim/backup/
 vim/dot-config/vim/swap/
 vim/dot-config/vim/plugged/
+nvim/dot-config/nvim/backup/
 alfred/repo/
 alfred/tmp/
 alfred/workspace/

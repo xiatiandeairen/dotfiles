@@ -8,6 +8,7 @@ fpath=(${ZDOTDIR}/autoload ${fpath})
 [ -f ${ZDOTDIR_SCRIPTS}/fzf.zsh ] && source ${ZDOTDIR_SCRIPTS}/fzf.zsh
 [ -f ${ZDOTDIR_SCRIPTS}/git.zsh ] && source ${ZDOTDIR_SCRIPTS}/git.zsh
 [ -f ${ZDOTDIR_SCRIPTS}/tmux.zsh ] && source ${ZDOTDIR_SCRIPTS}/tmux.zsh
+[ -f ${ZDOTDIR_SCRIPTS}/function.zsh ] && source ${ZDOTDIR_SCRIPTS}/function.zsh
 
 # autoload
 autoload -Uz surround lazyload lazybind cache_file delete_invalid_symlink bd delete_ds_store

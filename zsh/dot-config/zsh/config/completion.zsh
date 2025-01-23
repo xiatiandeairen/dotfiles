@@ -37,7 +37,7 @@
 # Completion for dot command
 _dot() {
   if [[ $words[1] == "dot" ]]; then
-    compadd pull push commit diff status apply bootstrap cd benchmark
+    compadd pull push commit diff status apply bootstrap cd benchmark edit
     return
   fi
 }

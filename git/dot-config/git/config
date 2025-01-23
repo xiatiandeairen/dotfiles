@@ -5,11 +5,11 @@
 	minRacyThreshold = 0 nanoseconds
 [core]
 	quotepath = false
-	excludesfile = ~/.config/git/.gitignore_global
+	excludesfile = ~/.config/git/gitignore_global
 	filemode = false
 	editor = nvim
 [commit]
-	template = ~/.config/git/.stCommitMsg
+	template = ~/.config/git/commit_template
 [filesystem "Oracle Corporation|1.8.0_131|/dev/disk1s5"]
 	timestampResolution = 1015 milliseconds
 	minRacyThreshold = 0 nanoseconds

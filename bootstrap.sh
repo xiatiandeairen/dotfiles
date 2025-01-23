@@ -16,35 +16,38 @@ function bootstrap {
 function dot {
     if [ $# -eq 0 ]; then
         echo "
-            Usage: dotfiles <command> [target]
+            Usage: dot <command> [target]
 
             Commands:
             pull        Fetch the latest changes from the remote repository and merge them into the target branch (default: develop).
-                        Usage: dotfiles pull [target]
+                        Usage: dot pull [target]
             
             push        Push your local changes to the remote repository on the target branch (default: develop).
-                        Usage: dotfiles push [target]
+                        Usage: dot push [target]
             
             commit      Stage all changes and commit them with a default message.
-                        Usage: dotfiles commit
+                        Usage: dot commit
             
             diff        Show the differences between your local changes and the latest commit.
-                        Usage: dotfiles diff
+                        Usage: dot diff
             
             cd          Change directory to the dotfiles repository.
-                        Usage: dotfiles cd
+                        Usage: dot cd
             
             status      Show the current status of your dotfiles repository.
-                        Usage: dotfiles status
+                        Usage: dot status
             
             apply       Apply a patch or configuration.
-                        Usage: dotfiles apply [target]
+                        Usage: dot apply [target]
             
             bootstrap   Initialize or set up the dotfiles (e.g., by installing dependencies).
-                        Usage: dotfiles bootstrap
+                        Usage: dot bootstrap
             
             benchmark   Run benchmark tests on the dotfiles setup.
-                        Usage: dotfiles benchmark
+                        Usage: dot benchmark
+
+            edit        use fzf to edit file.
+                        Usage: dot benchmark
         "
         return 1
     fi
@@ -87,6 +90,10 @@ function dot {
 
         "benchmark")
             zsh ${ZDOTDIR}/plugins/zsh-bench/zsh-bench
+        ;;
+
+        "edit")
+            find ${DOTFILES} -type f | fzf | xargs -0 -o nvim
         ;;
 
     esac

@@ -60,6 +60,9 @@ Commands:
     benchmark   Run benchmark tests on the dotfiles setup.
                 Usage: dot benchmark
 
+    edit        use fzf to edit files.
+                Usage: dot edit
+
 ```
 
 ## Thanks

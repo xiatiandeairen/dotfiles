@@ -93,7 +93,7 @@ function dot {
         ;;
 
         "edit")
-            find ${DOTFILES} -type f | fzf | xargs -0 -o nvim
+            find ${DOTFILES} -type f | fzf | xargs -o nvim
         ;;
 
     esac

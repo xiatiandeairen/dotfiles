@@ -1,0 +1,2 @@
+com.apple.finder:
+  NewWindowTargetPath: "file://${HOME}"

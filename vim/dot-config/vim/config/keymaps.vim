@@ -18,6 +18,7 @@ nnoremap <leader>ws <C-W>s
 nnoremap <leader>wc :close<cr>
 nnoremap <leader>wo <C-W>o
 
+nnoremap <Leader>. @:
 nnoremap U <C-r>
 
 noremap <C-j> <C-W>j

@@ -1,2 +1,35 @@
 com.apple.finder:
   NewWindowTargetPath: "file://${HOME}"
+  FXDefaultSearchScope: "SCsp"
+  _FXSortFoldersFirst: 1
+  ShowPathbar: 1
+
+com.apple.dock:
+  autohide: true
+
+org.hammerspoon.Hammerspoon:
+  MJConfigFile: "~/.config/hammerspoon/init.lua"
+  MJKeepConsoleOnTopKey: 0
+  SUAutomaticallyUpdate: 0
+  SUEnableAutomaticChecks: 0
+  SUHasLaunchedBefore: 1
+
+com.knollsoft.Rectangle:
+  SUEnableAutomaticChecks: 0
+  allowAnyShortcut: 1
+  alternateDefaultShortcuts: 1
+  launchOnLogin: 1
+
+com.dwarvesv.minimalbar:
+  isAutoStart: 1
+  isShowPreferences: 0
+  numberOfSecondForAutoHide: 30
+
+com.pilotmoon.Dropshelf:
+  NMStartAtLogin: 0
+
+com.apphousekitchen.aldente-pro:
+  LaunchAtLogin__hasMigrated: 1
+  SUEnableAutomaticChecks: 0
+  checkForUpdates: 0
+  chargeVal: 75

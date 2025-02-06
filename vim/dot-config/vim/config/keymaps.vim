@@ -26,6 +26,9 @@ noremap <C-k> <C-W>k
 noremap <C-h> <C-W>h
 noremap <C-l> <C-W>l
 
+nnoremap <silent> <leader>nf :call CreateFile()<CR>
+nnoremap <silent> <leader>nd :call CreateDirectory()<CR>
+
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 

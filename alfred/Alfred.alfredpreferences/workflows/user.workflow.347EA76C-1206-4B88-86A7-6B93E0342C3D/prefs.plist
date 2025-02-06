@@ -5,6 +5,12 @@
 	<key>subreddits</key>
 	<string>r/neovim
 r/opensource
-</string>
+r/ios
+r/macos
+r/harmonyos
+r/deepseek
+r/objective-c
+r/chatgpt
+r/claude</string>
 </dict>
 </plist>

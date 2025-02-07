@@ -1,2 +1,3 @@
-brew install node pnpm nvm nrm
-npm install -g typescript
+brew install node pnpm nvm
+pnpm install -g typescript
+pnpm install -g nrm

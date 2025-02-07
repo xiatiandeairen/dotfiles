@@ -4,7 +4,7 @@ function apply {
 }
 
 function bootstrap {
-    targets=(zsh brew bat broot eza tig tmux zoxide vim thefuck nvim direnv kitty emacs maven gradle hammerspoon shallow-backup)
+    targets=(zsh brew bat broot eza tig tmux zoxide vim thefuck nvim direnv kitty emacs maven gradle hammerspoon shallow-backup git)
     for target in "${targets[@]}"; do
         if [ -d ${DOTFILES}/${target} ]; then
             echo "apply ${target} success"

@@ -1,1 +1,1 @@
-brew install python@3.8
+brew install python@3.9 pipx

@@ -27,3 +27,12 @@ export PIPX_HOME="${XDG_DATA_HOME}/pipx"
 export PIPX_BIN_DIR="${PIPX_HOME}/bin"
 export PIPX_MAN_DIR="${PIPX_HOME}/man"
 export PIPX_SHARED_LIBS="${PIPX_HOME}/lib"
+
+# appnium
+export APPIUM_HOME="${XDG_DATA_HOME}/appium"
+export APPIUM_LOG="${XDG_CACHE_HOME}/appium/logs"
+export APPIUM_TMP="${XDG_CACHE_HOME}/appium/tmp"
+
+# android
+export ANDROID_USER_HOME="${XDG_CONFIG_HOME}/android"
+export ANDROID_HOME="${HOME}/Library/Android/sdk"

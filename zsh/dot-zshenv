@@ -1,4 +1,4 @@
-# XDG Base Home, more info see: 
+# XDG Base Home, more info see:
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
@@ -37,7 +37,7 @@ if $enable_nvim; then
     alias vim="nvim"
     export MYVIMDIR="${XDG_CONFIG_HOME}/nvim"
     export MYVIMRC="${MYVIMDIR}/init.lua"
-else 
+else
     alias nvim="vim"
     export MYVIMDIR="${XDG_CONFIG_HOME}/vim"
     export MYVIMRC="${MYVIMDIR}/init.vim"
@@ -103,7 +103,7 @@ export MAVEN_CONFIG="${XDG_CONFIG_HOME}/maven/settings.xml"
 # gradle
 export GRADLE_USER_HOME="${XDG_CONFIG_HOME}/gradle"
 export GRADLE_POM_REPOSITORY="${HOME}/repository/gradle"
-export GRADLE_PROPERTIES_FILE="${XDG_CONFIG_HOME}/gradle.properties"
+export GRADLE_PROPERTIES_FILE="${GRADLE_USER_HOME}/gradle.properties"
 
 # cocopods
 export PODS_ROOT="${XDG_CONFIG_HOME}/cocoapods"
@@ -115,6 +115,9 @@ export GEM_SPEC_CACHE="${XDG_DATA_HOME}/spec_cache"
 
 # password
 export PASSWORD_STORE_DIR="${XDG_CONFIG_HOME}/password-store"
+
+# shallo-backup
+export SHALLOW_BACKUP_CONFIG_DIR="${XDG_CONFIG_HOME}/shallo-backup"
 
 # language
 [ -f ${ZDOTDIR_CONFIG}/language.zsh ] && source ${ZDOTDIR_CONFIG}/language.zsh

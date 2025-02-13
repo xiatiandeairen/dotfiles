@@ -1,20 +1,7 @@
 {
     "backup_path": "~/shallow-backup",
     "dotfiles": {
-        ".bash_profile": {
-            "backup_condition": "",
-            "reinstall_condition": ""
-        },
-        ".bashrc": {},
-        ".config/git": {},
-        ".config/nvim/init.vim": {},
-        ".config/tmux": {},
-        ".config/zsh": {},
-        ".profile": {},
-        ".pypirc": {},
-        ".ssh": {},
-        ".zshenv": {},
-        ".config/shallow-backup.json": {}
+        ".config": {}
     },
     "root-gitignore": [
         "dotfiles/.ssh",

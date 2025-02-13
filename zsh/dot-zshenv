@@ -119,6 +119,10 @@ export PASSWORD_STORE_DIR="${XDG_CONFIG_HOME}/password-store"
 # shallo-backup
 export SHALLOW_BACKUP_CONFIG_DIR="${XDG_CONFIG_HOME}/shallo-backup"
 
+# GPG
+export GNUPGHOME="${XDG_CONFIG_HOME}/gnupg"
+export GPG_TTY=$(tty)
+
 # language
 [ -f ${ZDOTDIR_CONFIG}/language.zsh ] && source ${ZDOTDIR_CONFIG}/language.zsh
 

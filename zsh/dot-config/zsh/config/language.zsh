@@ -36,3 +36,7 @@ export APPIUM_TMP="${XDG_CACHE_HOME}/appium/tmp"
 # android
 export ANDROID_USER_HOME="${XDG_CONFIG_HOME}/android"
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
+export ANDROID_SDK_ROOT="${ANDROID_HOME}"
+
+# hdc
+export HDC_HOME="/Applications/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains/hdc"

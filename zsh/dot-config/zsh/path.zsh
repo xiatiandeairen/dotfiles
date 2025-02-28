@@ -6,4 +6,5 @@
 [ -e ${npm_config_prefix}/bin ] && export PATH="${npm_config_prefix}/bin:$PATH"
 [ -e ${PNPM_HOME} ] && export PATH="${PNPM_HOME}:$PATH"
 [ -e ${GEM_HOME}/bin ] && export PATH="${GEM_HOME}/bin:$PATH"
-[ -e $ANDROID_HOME ] && export PATH="$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
+[ -e ${ANDROID_HOME} ] && export PATH="$PATH:${ANDROID_HOME}/tools/bin:$ANDROID_HOME/platform-tools"
+[ -e ${HDC_HOME} ] && export PATH="$PATH:${HDC_HOME}"

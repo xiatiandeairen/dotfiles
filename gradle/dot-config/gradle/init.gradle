@@ -1,6 +1,9 @@
-allprojects {
-    repositories {
-        mavenCentral()
-        google()
-    }
+// 在 Gradle 初始化时执行
+gradle.projectsLoaded {
+    println "Gradle 初始化完成，项目名称：${rootProject.name}"
+}
+
+// 监听 Gradle 构建完成事件
+gradle.taskGraph.whenReady {
+    println "Gradle 任务准备执行..."
 }

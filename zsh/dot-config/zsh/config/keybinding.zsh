@@ -53,6 +53,7 @@ bindkey -M visual S add-surround
 # open tmux
 bindkey -s '^B' '^Qtmux attach-session -t "$(tmux ls 2>/dev/null | tail -n 1 | cut -d: -f1)"^M'
 bindkey -s '^E' '^Qselected_session=$(echo "$(tmux list-sessions -F "#{session_name}" 2>/dev/null)" | fzf --prompt "Select a tmux session" --preview "echo {}") && tmux attach-session -t "$selected_session" || echo "No session or exit. "^M'
+bindkey -s '^O' '^Qtmux new -t work^M'
 
 # zaw
 if typeset -f lazybind > /dev/null; then

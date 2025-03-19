@@ -1,6 +1,7 @@
 [ -e ${PIPX_BIN_DIR} ] && export PATH="${PIPX_BIN_DIR}:$PATH"
 [ -e ${DOTFILES}/workflow/bin ] && export PATH="${DOTFILES}/workflow/bin:$PATH"
 [ -e /opt/homebrew/bin ] && export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+[ -e /usr/local/Homebrew/bin ] && export PATH="/usr/local/bin:/usr/local/Homebrew/bin:/usr/local/sbin:$PATH"
 [ -e $HOME/.jenv/bin ] && export PATH="$HOME/.jenv/bin:$PATH"
 [ -e $HOME/bin ] && export PATH="$HOME/bin:$PATH"
 [ -e ${PNPM_HOME} ] && export PATH="${PNPM_HOME}:$PATH"

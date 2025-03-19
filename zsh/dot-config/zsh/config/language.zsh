@@ -4,7 +4,6 @@ export NRM_HOME="${XDG_CONFIG_HOME}/nrm"
 export NPM_HOME="${XDG_CONFIG_HOME}/npm"
 export npm_config_userconfig="${NPM_HOME}/npmrc"
 export npm_config_cache="${XDG_CACHE_HOME}/npm"
-export npm_config_prefix="${NPM_HOME}/npm-global"
 export PNPM_HOME="${XDG_DATA_HOME}/pnpm"
 export PNPM_STORE_PATH="${XDG_CACHE_HOME}/pnpm"
 

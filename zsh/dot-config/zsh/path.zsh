@@ -3,7 +3,6 @@
 [ -e /opt/homebrew/bin ] && export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 [ -e $HOME/.jenv/bin ] && export PATH="$HOME/.jenv/bin:$PATH"
 [ -e $HOME/bin ] && export PATH="$HOME/bin:$PATH"
-[ -e ${npm_config_prefix}/bin ] && export PATH="${npm_config_prefix}/bin:$PATH"
 [ -e ${PNPM_HOME} ] && export PATH="${PNPM_HOME}:$PATH"
 [ -e ${GEM_HOME}/bin ] && export PATH="${GEM_HOME}/bin:$PATH"
 [ -e ${ANDROID_HOME} ] && export PATH="$PATH:${ANDROID_HOME}/tools/bin:$ANDROID_HOME/platform-tools"

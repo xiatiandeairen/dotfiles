@@ -53,11 +53,6 @@ under the License.
   <localRepository>/path/to/local/repo</localRepository>
   -->
 
-
-  <localRepository>~/repository/maven</localRepository>
-
-
-
   <!-- interactiveMode
    | This will determine whether maven prompts you when it needs input. If set to false,
    | maven will use a sensible default value, perhaps based on some other setting, for
@@ -136,7 +131,7 @@ under the License.
       <passphrase>optional; leave empty if not used.</passphrase>
     </server>
     -->
-      <server>
+      <!-- <server>
         <id>tomcat7x</id>
         <username>admin</username>
         <password>admin123</password>
@@ -152,7 +147,7 @@ under the License.
           <id>nexus-snapshots</id>
           <username>admin</username>
           <password>admin123</password>
-      </server>
+      </server> -->
 
   </servers>
 
@@ -180,12 +175,12 @@ under the License.
       <url>http://my.repository.com/repo/path</url>
     </mirror>
      -->
-    <mirror>
+    <!-- <mirror>
       <id>alimaven</id>
       <name>aliyun maven</name>
       <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
       <mirrorOf>central</mirrorOf>
-    </mirror>
+    </mirror> -->
     <!-- <mirror>
         <id>nexus-releases</id>
         <mirrorOf>*</mirrorOf>
@@ -283,7 +278,7 @@ under the License.
 
     </profile>  -->
 
-    <profile>
+    <!-- <profile>
         <id>jdk-1.8</id>
         <activation>
           <activeByDefault>false</activeByDefault>
@@ -294,7 +289,7 @@ under the License.
             <maven.compiler.target>1.8</maven.compiler.target>
             <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
         </properties>
-    </profile>
+    </profile> -->
 
     <!--
      | Here is another profile, activated by the system property 'target-env' with a value of 'dev',

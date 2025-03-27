@@ -38,6 +38,6 @@ export ANDROID_HOME="${HOME}/Library/Android/sdk"
 export ANDROID_SDK_ROOT="${ANDROID_HOME}"
 
 # hdc
-export HDC_HOME="/Applications/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains/hdc"
+export HDC_HOME="/Applications/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains"
 export ARKUIX_SDK_HOME="${HOME}/Library/ArkUI-X/Sdk"
 export PATH="${ARKUIX_SDK_HOME}/14/arkui-x/toolchains/bin:$PATH"

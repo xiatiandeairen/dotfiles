@@ -98,12 +98,10 @@ export FZF_CTRL_R_OPTS=" \
 --header 'Press CTRL-Y to copy command into clipboard'"
 
 # maven
-export MAVEN_CONFIG="${XDG_CONFIG_HOME}/maven/settings.xml"
+export MAVEN_CONFIG="${HOME}/.m2/settings.xml"
 
 # gradle
-export GRADLE_USER_HOME="${XDG_CONFIG_HOME}/gradle"
-export GRADLE_POM_REPOSITORY="${HOME}/repository/gradle"
-export GRADLE_PROPERTIES_FILE="${GRADLE_USER_HOME}/gradle.properties"
+export GRADLE_USER_HOME="${HOME}/.gradle"
 
 # cocopods
 export PODS_ROOT="${XDG_CONFIG_HOME}/cocoapods"

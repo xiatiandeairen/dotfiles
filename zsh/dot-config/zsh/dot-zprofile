@@ -22,7 +22,7 @@ lazyload brew -- '
         brew_command="$(/usr/local/Homebrew/bin/brew shellenv)"
     fi
     [ ! -f ${BREW_CONFIG_PATH} ] && cache_file "${brew_command}" "${BREW_CONFIG_PATH}"
-    source ${BREW_CONFIG_PATH}
+    [ -s "${BREW_CONFIG_PATH}" ] && . ${BREW_CONFIG_PATH}
 '
 
 # the fuck
@@ -58,8 +58,10 @@ fi
 
 # jenv
 export JENV_CONFIG_PATH="${ZDOTDIR_CACHE}/jenv.sh"
+lazyload jenv -- '
 [ ! -f ${JENV_CONFIG_PATH} ] && cache_file "$(jenv init -)" "${JENV_CONFIG_PATH}"
-source ${JENV_CONFIG_PATH}
+[ -s "${JENV_CONFIG_PATH}" ] && . "${JENV_CONFIG_PATH}"
+'
 
 # alias
 source ${ZDOTDIR_CONFIG}/alias.zsh

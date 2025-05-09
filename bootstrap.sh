@@ -4,12 +4,12 @@ function apply {
 }
 
 function bootstrap {
-    targets=(zsh brew bat broot eza tig tmux zoxide vim thefuck nvim direnv kitty emacs maven gradle hammerspoon shallow-backup git)
+    targets=(zsh brew bat broot eza tig tmux zoxide vim thefuck nvim direnv kitty emacs maven gradle hammerspoon shallow-backup git npm)
     for target in "${targets[@]}"; do
         if [ -d ${DOTFILES}/${target} ]; then
             echo "apply ${target} success"
             apply ${target}
-        fi 
+        fi
     done
 }
 
@@ -21,28 +21,28 @@ function dot {
             Commands:
             pull        Fetch the latest changes from the remote repository and merge them into the target branch (default: develop).
                         Usage: dot pull [target]
-            
+
             push        Push your local changes to the remote repository on the target branch (default: develop).
                         Usage: dot push [target]
-            
+
             commit      Stage all changes and commit them with a default message.
                         Usage: dot commit
-            
+
             diff        Show the differences between your local changes and the latest commit.
                         Usage: dot diff
-            
+
             cd          Change directory to the dotfiles repository.
                         Usage: dot cd
-            
+
             status      Show the current status of your dotfiles repository.
                         Usage: dot status
-            
+
             apply       Apply a patch or configuration.
                         Usage: dot apply [target]
-            
+
             bootstrap   Initialize or set up the dotfiles (e.g., by installing dependencies).
                         Usage: dot bootstrap
-            
+
             benchmark   Run benchmark tests on the dotfiles setup.
                         Usage: dot benchmark
 
@@ -59,7 +59,7 @@ function dot {
         "pull")
             $(which git) -C "${DOTFILES}" pull origin ${target:-develop} --autostash
         ;;
-        
+
         "push")
             $(which git) -C "${DOTFILES}" push origin ${target:-develop}
         ;;
@@ -75,15 +75,15 @@ function dot {
         "cd")
             cd "${DOTFILES}"
         ;;
-        
+
         "status")
             $(which git) -C "${DOTFILES}" status
         ;;
-        
+
         "apply")
             apply ${target}
         ;;
-        
+
         "bootstrap")
             bootstrap
         ;;
